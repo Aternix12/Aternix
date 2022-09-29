@@ -27,6 +27,8 @@ mix
     .js('resources/js/app.js', 'public/js/laravel.app.js')
     .js('resources/js/dashmix/app.js', 'public/js/dashmix.app.js')
 
+
+
     /* Page JS */
     .js('resources/js/pages/tables_datatables.js', 'public/js/pages/tables_datatables.js')
 
@@ -38,3 +40,7 @@ mix
     .options({
         processCssUrls: false
     });
+
+    module.exports = {
+        devtool: "source-map",
+    }
