@@ -118,7 +118,6 @@
   <script src="/js/laravel.app.js"></script>
 
 
-<script type="text/javascript" src="js/frontend.js"></script>
 
   @yield('js_after')
   <script>
