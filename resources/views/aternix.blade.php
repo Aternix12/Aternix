@@ -52,12 +52,6 @@
 
               IndieDB
             </span>
-
-            <span class="text-white fw-semibold me-1">
-              <i class="fa fa-fw fa-comments text-white-50"></i>
-
-              ModDB
-            </span>
           </p>
         </div>
 
