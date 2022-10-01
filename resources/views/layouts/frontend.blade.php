@@ -31,7 +31,8 @@
 
 
   <!-- Scripts -->
-
+  <!-- Laravel Original JS -->
+  <script src="/js/laravel.app.js"></script>
 
 
   <script>
@@ -114,8 +115,7 @@
   <!-- Dashmix Core JS -->
   <script src="/js/dashmix.app.js"></script>
 
-  <!-- Laravel Original JS -->
-  <script src="/js/laravel.app.js"></script>
+
 
 
 
