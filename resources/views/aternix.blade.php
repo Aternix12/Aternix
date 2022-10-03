@@ -32,7 +32,7 @@
             <span class="text-white fw-semibold me-1">
               <i class="fa fa-fw fa-steam text-white-50"></i>
 
-              Steam TEST TEST TEST
+              Steam
             </span>
 
             <span class="text-white fw-semibold me-1">
