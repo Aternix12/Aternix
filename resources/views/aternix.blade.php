@@ -44,14 +44,14 @@
             <span class="text-white fw-semibold me-1">
               <i class="fa fa-fw fa-comments text-white-50"></i>
 
-              GOG
+              IndieDB
             </span>
 
             <span class="text-white fw-semibold me-1">
-              <i class="fa fa-fw fa-comments text-white-50"></i>
+                <i class="fa fa-fw fa-comments text-white-50"></i>
 
-              IndieDB
-            </span>
+                ModDB
+              </span>
           </p>
         </div>
 
