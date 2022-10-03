@@ -38,7 +38,7 @@
             <span class="text-white fw-semibold me-1">
               <i class="fa fa-fw fa-heart text-white-50"></i>
 
-              Itch TEST
+              Itch
             </span>
 
             <span class="text-white fw-semibold me-1">
