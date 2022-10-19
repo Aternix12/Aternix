@@ -19,7 +19,7 @@
 <div class="video-container">
 <video width="1920" height="200" autoplay loop muted playsinline class="smoke">
     <source
-      src="media/videos/smoke.webm"
+      src="media/videos/Smoke.webm"
       type="video/webm">
   </video>
 </div>
@@ -39,7 +39,7 @@
             <span class="text-white fw-semibold me-1">
               <i class="fa fa-fw fa-steam text-white-50"></i>
 
-              Steam TEST TEST TEST TEST
+              Steam
             </span>
 
             <span class="text-white fw-semibold me-1">
