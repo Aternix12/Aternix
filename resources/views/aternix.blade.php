@@ -3,7 +3,6 @@
 <link
   href="/js/plugins/tsparticles/particles.css"
   rel="stylesheet">
-</link>
 
 
 <!-- Hero -->
@@ -17,9 +16,17 @@
 </div>
 
 <!-- END Hero -->
+<div class="video-container">
+<video width="1920" height="200" autoplay loop muted playsinline class="smoke">
+    <source
+      src="media/videos/smoke.webm"
+      type="video/webm">
+  </video>
+</div>
+
 <div id="main">
 <div class="row items-push">
-  <div class="col-md-6 animated fadeIn">
+  <div class="col-md-6 hidden">
     <a
       class="block block-rounded bg-image h-100 mb-0"
       href="javascript:void(0)"
@@ -62,7 +69,7 @@
     </a>
   </div>
 
-  <div class="col-md-6 animated fadeIn">
+  <div class="col-md-6">
     <a
       class="block block-rounded bg-image h-100 mb-0"
       href="javascript:void(0)"

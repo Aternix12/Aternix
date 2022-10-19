@@ -1,104 +1,158 @@
 #page-container {
-    background-color: #0E0E10;
+    background-color: black;
 }
-#tsparticles{
-  height: 80vh;
-  width: 100% !important;
+
+#tsparticles {
+    height: 90vh;
+    width: 100% !important;
 }
-.frontend-header{
-  background-color: #101010;
-  min-height: 45px;
-  align-items: stretch;
+
+.frontend-header {
+    background-color: #101010;
+    min-height: 45px;
+    align-items: stretch;
 }
-#frontend-header-div{
-  justify-content: center;
-  display: flex;
-  height: inherit;
+
+#frontend-header-div {
+    justify-content: center;
+    display: flex;
+    height: inherit;
 }
-#frontend-header-list{
-  display: flex;
-  justify-content: center;
-  min-height: 45px;
-  min-height: inherit;
-  margin: 0;
+
+#frontend-header-list {
+    display: flex;
+    justify-content: center;
+    min-height: 45px;
+    min-height: inherit;
+    margin: 0;
 }
-.main-menu-item{
-  min-height: inherit;
+
+.main-menu-item {
+    min-height: inherit;
 }
-.main-menu-link{
-  padding-left: 20px;
-  padding-right: 20px;
-  min-height: inherit;
-  align-items: center;
-  display: flex;
-  width: fit-content;
+
+.main-menu-link {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: inherit;
+    align-items: center;
+    display: flex;
+    width: fit-content;
 }
+
 span {
     color: white;
 }
-ul{
-  list-style: none;
+
+ul {
+    list-style: none;
 }
-.main-menu-item:hover{
-  background-color: #171717;
+
+.main-menu-item:hover {
+    background-color: #171717;
 }
-svg{
-  margin-right: 0.5em;
-  color: red;
+
+svg {
+    margin-right: 0.5em;
+    color: red;
 }
-.row{
-  margin: 0 !important;
+
+.row {
+    margin: 0 !important;
 }
+
 canvas {
     max-height: 80vh !important;
 }
+
 #main {
     padding: 8% 12% 8% 12%;
+    background-color: #0E0E10;
+
 }
-#aternixlogoheader{
-  margin-left: 4%;
-  margin-right: 4%;
+
+#aternixlogoheader {
+    margin-left: 4%;
+    margin-right: 4%;
 }
-#logospan{
-  width: inherit;
+
+#logospan {
+    width: inherit;
 }
-#logoanchor{
-  width: 100%;
+
+#logoanchor {
+    width: 100%;
 }
-.hero{
-  height: 80vh;
-  background-color: black;
+
+.hero {
+    height: 80vh;
+    background-color: black;
 }
-#about-hero{
-  align-items: flex-end;
+
+#about-hero {
+    align-items: flex-end;
 }
+
 .artist-info {
     text-align: center;
 }
-.artist-name{
-  color: #f1f1f1;
+
+.artist-name {
+    color: #f1f1f1;
 }
-#about-profile-img{
-  border-radius: 50%;
+
+#about-profile-img {
+    border-radius: 50%;
 }
-.block{
-  box-shadow: 0 1px 3px rgb(255 0 0 / 20%), 0 1px 2px rgb(255 0 0 / 50%);
-}
-.block-fx-shadow{
-  box-shadow: 0 0 2.25rem #6c0a0a !important;
-}
-.about-icons{
-  height: 32px;
-}
+
 .block {
-  background-color: #20242d !important;
+    box-shadow: 0 1px 3px rgb(255 0 0 / 20%), 0 1px 2px rgb(255 0 0 / 50%);
 }
+
+.block-fx-shadow {
+    box-shadow: 0 0 2.25rem #6c0a0a !important;
+}
+
+.about-icons {
+    height: 32px;
+}
+
+.block {
+    background-color: #20242d !important;
+}
+
 .block-header-default {
-  background-color: #2c323f!important;
+    background-color: #2c323f !important;
 }
-small{
-  color: #b50000 !important;
+
+small {
+    color: #b50000 !important;
 }
-.artist-text{
-  margin-bottom: 0;
+
+.artist-text {
+    margin-bottom: 0;
+}
+
+.smoke {
+    object-fit: fill;
+    aspect-ratio: unset !important;
+    width: 1920px !important;
+    height: 200px !important;
+    z-index: 50;
+    filter: brightness(25%);
+    margin-top: -5%;
+
+}
+.video-container{
+    background-image: linear-gradient(to bottom, black , #0E0E10);
+    margin-top: -5%;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
 }

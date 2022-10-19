@@ -7,12 +7,10 @@
 
 // Imports
 import * as bootstrap from 'bootstrap';
-import SimpleBar from 'simplebar';
 import Helpers from './helpers';
 
 // Assignments
 window.bootstrap    = bootstrap;
-window.SimpleBar    = SimpleBar;
 
 // Template
 export default class Template {
@@ -91,10 +89,10 @@ export default class Template {
           clearTimeout(self._lResize);
 
           self._lPage.classList.remove('side-trans-enabled');
-          
+
           self._lResize = setTimeout(() => { self._lPage.classList.add('side-trans-enabled'); }, 500);
         });
-  
+
         // Init custom scrolling
         this._uiHandleSidebars('custom-scroll');
       } else if (mode = 'custom-scroll') {
@@ -104,7 +102,7 @@ export default class Template {
           if ((self._lSidebar) && !self._lSidebarScroll) {
             self._lSidebarScroll = new SimpleBar(self._lSidebarScrollCon);
           }
-  
+
           // Init custom scrolling on Side Overlay
           if ((self._lSideOverlay) && !self._lSideOverlayScroll) {
             self._lSideOverlayScroll = new SimpleBar(self._lSideOverlay);
@@ -150,7 +148,7 @@ export default class Template {
 
           // Get main navigation
           let mainNav = link.closest('.nav-main');
-          
+
           // Check if we are in horizontal navigation, large screen and hover is enabled
           if (
             !(
@@ -161,7 +159,7 @@ export default class Template {
           ) {
             // Get link's parent
             let parentLi = link.closest('li');
-    
+
             if (parentLi.classList.contains('open')) {
               // If submenu is open, close it..
               parentLi.classList.remove('open');
@@ -174,11 +172,11 @@ export default class Template {
               });
 
               parentLi.classList.add('open');
-              
+
               link.setAttribute('aria-expanded', 'true');
             }
           }
-    
+
           return false;
         });
       });
@@ -298,23 +296,23 @@ export default class Template {
     document.querySelectorAll('[data-toggle="theme"]').forEach(el => {
       el.addEventListener('click', e => {
         e.preventDefault();
-  
+
         // Get element's data
         let themeName = el.dataset.theme;
-  
+
         // Set this color theme link as active
         document.querySelectorAll('[data-toggle="theme"]').forEach(link => {
           link.classList.remove('active');
         });
 
         document.querySelector('[data-toggle="theme"][data-theme="' + themeName + '"]').classList.add('active');
-  
+
         // Update color theme
         self._uiUpdateTheme(themeEl, themeName);
-  
+
         // Update theme element
         themeEl = document.getElementById('css-theme');
-  
+
         // If remember theme is enabled, save the new active color theme
         if (rememberTheme) {
           localStorage.setItem('dashmixThemeName', themeName);
@@ -358,7 +356,7 @@ export default class Template {
     let layoutAPI = {
       init: () => {
         let buttons = document.querySelectorAll('[data-toggle="layout"]');
-        
+
         // Call layout API on button click
         if (buttons) {
           buttons.forEach(btn => {
@@ -549,7 +547,7 @@ export default class Template {
         if (!localStorage.getItem('dashmixDefaultsPageHeaderDark')) {
           self._lPage.classList.remove('page-header-dark');
         }
-        
+
         self._lPage.classList.remove('dark-mode');
         this._uiHandleDarkMode('off');
       },
