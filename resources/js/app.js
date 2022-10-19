@@ -15,17 +15,16 @@ document.addEventListener("DOMContentLoaded", function(event){
   });
 
 //ScrollAnimation
-/*
-const observer = new IntersectionObserver(() => {
-    entries.forEach(() => {
-        if(Entry.isIntersecting){
-            Entry.target.classList.add('show');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
         } else {
-            Entry.target.classList.remove('show');
+            entry.target.classList.remove('show');
         }
     });
 });
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
-*/
+

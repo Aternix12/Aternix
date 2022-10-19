@@ -2100,20 +2100,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 //ScrollAnimation
-/*
-const observer = new IntersectionObserver(() => {
-    entries.forEach(() => {
-        if(Entry.isIntersecting){
-            Entry.target.classList.add('show');
-        } else {
-            Entry.target.classList.remove('show');
-        }
-    });
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
 });
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
-*/
+var hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach(function (el) {
+  return observer.observe(el);
+});
 
 /***/ }),
 
