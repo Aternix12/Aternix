@@ -33,7 +33,7 @@
       style="background-image: url('/media/photos/WarInSpace.png');">
       <div class="block-content bg-black-50">
         <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
-          <p><span class="badge bg-primary fw-bold p-2 text-uppercase">201888</span></p>
+          <p><span class="badge bg-primary fw-bold p-2 text-uppercase">2018</span></p>
 
           <p class="fs-sm">
             <span class="text-white fw-semibold me-1">
