@@ -77,7 +77,7 @@
       <div class="block-content bg-black-50">
         <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
           <p>
-            <span class="badge bg-danger fw-bold p-2 text-uppercase">In Development</span>
+            <span class="badge bg-danger fw-bold p-2 text-uppercase">In Development TEST</span>
           </p>
 
           <p class="fs-sm">
