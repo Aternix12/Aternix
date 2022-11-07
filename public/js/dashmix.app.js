@@ -3201,24 +3201,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Helpers)
 /* harmony export */ });
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 /*
  *  Document   : helpers.js
  *  Author     : pixelcave
  *  Description: Various helpers for plugin inits or helper functionality
  *
  */
-
 // Helper variables
 var jqSparklineResize = false;
-var jqSparklineTimeout;
+var jqSparklineTimeout; // Helpers
 
-// Helpers
 var Helpers = /*#__PURE__*/function () {
   function Helpers() {
     _classCallCheck(this, Helpers);
   }
+
   _createClass(Helpers, null, [{
     key: "run",
     value:
@@ -3228,6 +3230,7 @@ var Helpers = /*#__PURE__*/function () {
      */
     function run(helpers) {
       var _this = this;
+
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var helperList = {
         // Bootstrap
@@ -3316,6 +3319,7 @@ var Helpers = /*#__PURE__*/function () {
           return _this.jqValidation();
         }
       };
+
       if (helpers instanceof Array) {
         for (var index in helpers) {
           if (helperList[helpers[index]]) {
@@ -3328,7 +3332,6 @@ var Helpers = /*#__PURE__*/function () {
         }
       }
     }
-
     /*
      ********************************************************************************************
      *
@@ -3348,22 +3351,21 @@ var Helpers = /*#__PURE__*/function () {
      * <button type="button" class="btn btn-primary js-bs-tooltip" title="Tooltip Text">Example</button>
      *
      */
+
   }, {
     key: "bsTooltip",
     value: function bsTooltip() {
       var elements = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]:not(.js-bs-tooltip-enabled), .js-bs-tooltip:not(.js-bs-tooltip-enabled)'));
       window.helperBsTooltips = elements.map(function (el) {
         // Add .js-bs-tooltip-enabled class to tag it as activated
-        el.classList.add('js-bs-tooltip-enabled');
+        el.classList.add('js-bs-tooltip-enabled'); // Init Bootstrap Tooltip
 
-        // Init Bootstrap Tooltip
         return new bootstrap.Tooltip(el, {
           container: el.dataset.bsContainer || '#page-container',
           animation: el.dataset.bsAnimation && el.dataset.bsAnimation.toLowerCase() == 'true' ? true : false
         });
       });
     }
-
     /*
      * Bootstrap Popover, for more examples you can check out https://getbootstrap.com/docs/5.0/components/popovers/
      *
@@ -3375,15 +3377,15 @@ var Helpers = /*#__PURE__*/function () {
      * <button type="button" class="btn btn-primary js-popover" title="Popover Title" data-bs-content="This is the content of the Popover">Example</button>
      *
      */
+
   }, {
     key: "bsPopover",
     value: function bsPopover() {
       var elements = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]:not(.js-bs-popover-enabled), .js-bs-popover:not(.js-bs-popover-enabled)'));
       window.helperBsPopovers = elements.map(function (el) {
         // Add .js-bs-popover-enabled class to tag it as activated
-        el.classList.add('js-bs-popover-enabled');
+        el.classList.add('js-bs-popover-enabled'); // Init Bootstrap Popover
 
-        // Init Bootstrap Popover
         return new bootstrap.Popover(el, {
           container: el.dataset.bsContainer || '#page-container',
           animation: el.dataset.bsAnimation && el.dataset.bsAnimation.toLowerCase() == 'true' ? true : false,
@@ -3391,7 +3393,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      ********************************************************************************************
      *
@@ -3414,6 +3415,7 @@ var Helpers = /*#__PURE__*/function () {
      * <button type="button" class="btn btn-primary js-class-toggle" data-target="#elementID" data-class="exampleClass">Toggle</button>
      *
      */
+
   }, {
     key: "dmToggleClass",
     value: function dmToggleClass() {
@@ -3421,12 +3423,10 @@ var Helpers = /*#__PURE__*/function () {
       elements.forEach(function (el) {
         el.addEventListener('click', function () {
           // Add .js-class-toggle-enabled class to tag it as activated
-          el.classList.add('js-class-toggle-enabled');
+          el.classList.add('js-class-toggle-enabled'); // Get all classes
 
-          // Get all classes
-          var cssClasses = el.dataset["class"] ? el.dataset["class"].split(' ') : false;
+          var cssClasses = el.dataset["class"] ? el.dataset["class"].split(' ') : false; // Toggle class on target elements
 
-          // Toggle class on target elements
           document.querySelectorAll(el.dataset.target).forEach(function (targetEl) {
             if (cssClasses) {
               cssClasses.forEach(function (cls) {
@@ -3437,7 +3437,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Add the correct copyright year to an element
      *
@@ -3449,6 +3448,7 @@ var Helpers = /*#__PURE__*/function () {
      * <span data-toggle="year-copy">2018</span>
      *
      */
+
   }, {
     key: "dmYearCopy",
     value: function dmYearCopy() {
@@ -3456,16 +3456,13 @@ var Helpers = /*#__PURE__*/function () {
       elements.forEach(function (el) {
         var date = new Date();
         var currentYear = date.getFullYear();
-        var baseYear = el.textContent || currentYear;
+        var baseYear = el.textContent || currentYear; // Add .js-year-copy-enabled class to tag it as activated
 
-        // Add .js-year-copy-enabled class to tag it as activated
-        el.classList.add('js-year-copy-enabled');
+        el.classList.add('js-year-copy-enabled'); // Set the correct year
 
-        // Set the correct year
         el.textContent = parseInt(baseYear) >= currentYear ? currentYear : baseYear + '-' + currentYear.toString().substr(2, 2);
       });
     }
-
     /*
      * Ripple effect fuctionality
      *
@@ -3476,26 +3473,24 @@ var Helpers = /*#__PURE__*/function () {
      * <button type="button" class="btn btn-primary" data-toggle="click-ripple">Click Me!</button>
      *
      */
+
   }, {
     key: "dmRipple",
     value: function dmRipple() {
       var elements = document.querySelectorAll('[data-toggle="click-ripple"]:not(.js-click-ripple-enabled)');
       elements.forEach(function (el) {
         // Add .js-click-ripple-enabled class to tag it as activated and init it
-        el.classList.add('js-click-ripple-enabled');
+        el.classList.add('js-click-ripple-enabled'); // Add custom CSS styles
 
-        // Add custom CSS styles
         el.style.overflow = 'hidden';
         el.style.position = 'relative';
-        el.style.zIndex = 1;
+        el.style.zIndex = 1; // On click create and render the ripple
 
-        // On click create and render the ripple
         el.addEventListener('click', function (e) {
           var cssClass = 'click-ripple';
           var ripple = el.querySelector('.' + cssClass);
-          var d, x, y;
+          var d, x, y; // If the ripple element exists in this element, remove .animate class from ripple element..
 
-          // If the ripple element exists in this element, remove .animate class from ripple element..
           if (ripple) {
             ripple.classList.remove('animate');
           } else {
@@ -3503,54 +3498,48 @@ var Helpers = /*#__PURE__*/function () {
             var elChild = document.createElement('span');
             elChild.classList.add(cssClass);
             el.insertBefore(elChild, el.firstChild);
-          }
+          } // Get the ripple element
 
-          // Get the ripple element
-          ripple = el.querySelector('.' + cssClass);
 
-          // If the ripple element doesn't have dimensions, set them accordingly
+          ripple = el.querySelector('.' + cssClass); // If the ripple element doesn't have dimensions, set them accordingly
+
           if (getComputedStyle(ripple).height === '0px' || getComputedStyle(ripple).width === '0px') {
             d = Math.max(el.offsetWidth, el.offsetHeight);
             ripple.style.height = d + 'px';
             ripple.style.width = d + 'px';
-          }
+          } // Get coordinates for our ripple element
 
-          // Get coordinates for our ripple element
+
           x = e.pageX - (el.getBoundingClientRect().left + window.scrollX) - parseFloat(getComputedStyle(ripple).width.replace('px', '')) / 2;
-          y = e.pageY - (el.getBoundingClientRect().top + window.scrollY) - parseFloat(getComputedStyle(ripple).height.replace('px', '')) / 2;
+          y = e.pageY - (el.getBoundingClientRect().top + window.scrollY) - parseFloat(getComputedStyle(ripple).height.replace('px', '')) / 2; // Position the ripple element and add the class .animate to it
 
-          // Position the ripple element and add the class .animate to it
           ripple.style.top = y + 'px';
           ripple.style.left = x + 'px';
           ripple.classList.add('animate');
         });
       });
     }
-
     /*
      * Print Page functionality
      *
      * Helpers.run('dm-print');
      *
      */
+
   }, {
     key: "dmPrint",
     value: function dmPrint() {
       // Store all #page-container classes
       var lPage = document.getElementById('page-container');
       var pageCls = lPage.className;
-      console.log(pageCls);
+      console.log(pageCls); // Remove all classes from #page-container
 
-      // Remove all classes from #page-container
-      lPage.classList = '';
+      lPage.classList = ''; // Print the page
 
-      // Print the page
-      window.print();
+      window.print(); // Restore all #page-container classes
 
-      // Restore all #page-container classes
       lPage.classList = pageCls;
     }
-
     /*
      * Table sections functionality
      *
@@ -3561,20 +3550,21 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Table Helpers page for complete markup examples
      *
      */
+
   }, {
     key: "dmTableToolsSections",
     value: function dmTableToolsSections() {
       var tables = document.querySelectorAll('.js-table-sections:not(.js-table-sections-enabled)');
       tables.forEach(function (table) {
         // Add .js-table-sections-enabled class to tag it as activated
-        table.classList.add('js-table-sections-enabled');
+        table.classList.add('js-table-sections-enabled'); // When a row is clicked in tbody.js-table-sections-header
 
-        // When a row is clicked in tbody.js-table-sections-header
         table.querySelectorAll('.js-table-sections-header > tr').forEach(function (tr) {
           tr.addEventListener('click', function (e) {
             if (e.target.type !== 'checkbox' && e.target.type !== 'button' && e.target.tagName.toLowerCase() !== 'a' && e.target.parentNode.nodeName.toLowerCase() !== 'a' && e.target.parentNode.nodeName.toLowerCase() !== 'button' && e.target.parentNode.nodeName.toLowerCase() !== 'label' && !e.target.parentNode.classList.contains('custom-control')) {
               var tbody = tr.parentNode;
               var tbodyAll = table.querySelectorAll('tbody');
+
               if (!tbody.classList.contains('show')) {
                 if (tbodyAll) {
                   tbodyAll.forEach(function (tbodyEl) {
@@ -3583,6 +3573,7 @@ var Helpers = /*#__PURE__*/function () {
                   });
                 }
               }
+
               tbody.classList.toggle('show');
               tbody.classList.toggle('table-active');
             }
@@ -3590,7 +3581,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Checkable table functionality
      *
@@ -3601,59 +3591,54 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Table Helpers page for complete markup examples
      *
      */
+
   }, {
     key: "dmTableToolsCheckable",
     value: function dmTableToolsCheckable() {
       var _this2 = this;
+
       var tables = document.querySelectorAll('.js-table-checkable:not(.js-table-checkable-enabled)');
       tables.forEach(function (table) {
         // Add .js-table-checkable-enabled class to tag it as activated
-        table.classList.add('js-table-checkable-enabled');
+        table.classList.add('js-table-checkable-enabled'); // When a checkbox is clicked in thead
 
-        // When a checkbox is clicked in thead
         table.querySelector('thead input[type=checkbox]').addEventListener('click', function (e) {
           // Check or uncheck all checkboxes in tbody
           table.querySelectorAll('tbody input[type=checkbox]').forEach(function (checkbox) {
-            checkbox.checked = e.currentTarget.checked;
+            checkbox.checked = e.currentTarget.checked; // Update Row classes
 
-            // Update Row classes
             _this2.tableToolscheckRow(checkbox, e.currentTarget.checked);
           });
-        });
+        }); // When a checkbox is clicked in tbody
 
-        // When a checkbox is clicked in tbody
         table.querySelectorAll('tbody input[type=checkbox], tbody input + label').forEach(function (checkbox) {
           checkbox.addEventListener('click', function (e) {
-            var checkboxHead = table.querySelector('thead input[type=checkbox]');
+            var checkboxHead = table.querySelector('thead input[type=checkbox]'); // Adjust checkbox in thead
 
-            // Adjust checkbox in thead
             if (!checkbox.checked) {
               checkboxHead.checked = false;
             } else {
               if (table.querySelectorAll('tbody input[type=checkbox]:checked').length === table.querySelectorAll('tbody input[type=checkbox]').length) {
                 checkboxHead.checked = true;
               }
-            }
+            } // Update Row classes
 
-            // Update Row classes
+
             _this2.tableToolscheckRow(checkbox, checkbox.checked);
           });
-        });
+        }); // When a row is clicked in tbody
 
-        // When a row is clicked in tbody
         table.querySelectorAll('tbody > tr').forEach(function (tr) {
           tr.addEventListener('click', function (e) {
             if (e.target.type !== 'checkbox' && e.target.type !== 'button' && e.target.tagName.toLowerCase() !== 'a' && e.target.parentNode.nodeName.toLowerCase() !== 'a' && e.target.parentNode.nodeName.toLowerCase() !== 'button' && e.target.parentNode.nodeName.toLowerCase() !== 'label' && !e.target.parentNode.classList.contains('custom-control')) {
               var checkboxHead = table.querySelector('thead input[type=checkbox]');
-              var checkbox = e.currentTarget.querySelector('input[type=checkbox]');
+              var checkbox = e.currentTarget.querySelector('input[type=checkbox]'); // Update row's checkbox status
 
-              // Update row's checkbox status
-              checkbox.checked = !checkbox.checked;
+              checkbox.checked = !checkbox.checked; // Update Row classes
 
-              // Update Row classes
-              _this2.tableToolscheckRow(checkbox, checkbox.checked);
+              _this2.tableToolscheckRow(checkbox, checkbox.checked); // Adjust checkbox in thead
 
-              // Adjust checkbox in thead
+
               if (!checkbox.checked) {
                 checkboxHead.checked = false;
               } else {
@@ -3665,9 +3650,8 @@ var Helpers = /*#__PURE__*/function () {
           });
         });
       });
-    }
+    } // Checkable table functionality helper - Checks or unchecks table row
 
-    // Checkable table functionality helper - Checks or unchecks table row
   }, {
     key: "tableToolscheckRow",
     value: function tableToolscheckRow(checkbox, checkedStatus) {
@@ -3677,7 +3661,6 @@ var Helpers = /*#__PURE__*/function () {
         checkbox.closest('tr').classList.remove('table-active');
       }
     }
-
     /*
      ********************************************************************************************
      *
@@ -3697,30 +3680,27 @@ var Helpers = /*#__PURE__*/function () {
      * <div id="js-ckeditor-inline">Hello inline CKEditor!</div>
      *
      */
+
   }, {
     key: "jsCkeditor",
     value: function jsCkeditor() {
       var ckeditorInline = document.querySelector('#js-ckeditor-inline:not(.js-ckeditor-inline-enabled)');
-      var ckeditorFull = document.querySelector('#js-ckeditor:not(.js-ckeditor-enabled)');
+      var ckeditorFull = document.querySelector('#js-ckeditor:not(.js-ckeditor-enabled)'); // Init inline text editor
 
-      // Init inline text editor
       if (ckeditorInline) {
         ckeditorInline.setAttribute('contenteditable', 'true');
-        CKEDITOR.inline('js-ckeditor-inline');
+        CKEDITOR.inline('js-ckeditor-inline'); // Add .js-ckeditor-inline-enabled class to tag it as activated
 
-        // Add .js-ckeditor-inline-enabled class to tag it as activated
         ckeditorInline.classList.add('js-ckeditor-inline-enabled');
-      }
+      } // Init full text editor
 
-      // Init full text editor
+
       if (ckeditorFull) {
-        CKEDITOR.replace('js-ckeditor');
+        CKEDITOR.replace('js-ckeditor'); // Add .js-ckeditor-enabled class to tag it as activated
 
-        // Add .js-ckeditor-enabled class to tag it as activated
         ckeditorFull.classList.add('js-ckeditor-enabled');
       }
     }
-
     /*
      * CKEditor 5 init, for more examples you can check out http://ckeditor.com/
      *
@@ -3733,22 +3713,22 @@ var Helpers = /*#__PURE__*/function () {
      * <div id="js-ckeditor5-inline">Hello inline CKEditor 5!</div>
      *
      */
+
   }, {
     key: "jsCkeditor5",
     value: function jsCkeditor5() {
       var ckeditor5Inline = document.querySelector('#js-ckeditor5-inline');
-      var ckeditor5Full = document.querySelector('#js-ckeditor5-classic');
+      var ckeditor5Full = document.querySelector('#js-ckeditor5-classic'); // Init inline text editor
 
-      // Init inline text editor
       if (ckeditor5Inline) {
         InlineEditor.create(document.querySelector('#js-ckeditor5-inline')).then(function (editor) {
           window.editor = editor;
         })["catch"](function (error) {
           console.error('There was a problem initializing the inline editor.', error);
         });
-      }
+      } // Init full text editor
 
-      // Init full text editor
+
       if (ckeditor5Full) {
         ClassicEditor.create(document.querySelector('#js-ckeditor5-classic')).then(function (editor) {
           window.editor = editor;
@@ -3757,7 +3737,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       }
     }
-
     /*
      * SimpleMDE init, for more examples you can check out https://github.com/NextStepWebs/simplemde-markdown-editor
      *
@@ -3768,6 +3747,7 @@ var Helpers = /*#__PURE__*/function () {
      * <textarea class="js-simplemde" id="simplemde" name="simplemde">Hello SimpleMDE!</textarea>
      *
      */
+
   }, {
     key: "jsSimpleMDE",
     value: function jsSimpleMDE() {
@@ -3778,15 +3758,13 @@ var Helpers = /*#__PURE__*/function () {
           element: el,
           autoDownloadFontAwesome: false
         });
-      });
+      }); // Fix: Change SimpleMDE's Font Awesome 4 Icons with Font Awesome 5
 
-      // Fix: Change SimpleMDE's Font Awesome 4 Icons with Font Awesome 5
       if (elements) {
         document.querySelector('.editor-toolbar > a.fa-header').classList.replace('fa-header', 'fa-heading');
         document.querySelector('.editor-toolbar > a.fa-picture-o').classList.replace('fa-picture-o', 'fa-image');
       }
     }
-
     /*
      * Highlight.js, for more examples you can check out https://highlightjs.org/usage/
      *
@@ -3797,6 +3775,7 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Syntax Highlighting page in Components for complete markup examples
      *
      */
+
   }, {
     key: "jsHighlightjs",
     value: function jsHighlightjs() {
@@ -3805,7 +3784,6 @@ var Helpers = /*#__PURE__*/function () {
         hljs.initHighlighting();
       }
     }
-
     /*
      * Flatpickr init, for more examples you can check out https://github.com/flatpickr/flatpickr
      *
@@ -3816,19 +3794,18 @@ var Helpers = /*#__PURE__*/function () {
      * <input type="text" class="js-flatpickr form-control">
      *
      */
+
   }, {
     key: "jsFlatpickr",
     value: function jsFlatpickr() {
       var elements = document.querySelectorAll('.js-flatpickr:not(.js-flatpickr-enabled)');
       elements.forEach(function (el) {
         // Add .js-flatpickr-enabled class to tag it as activated
-        el.classList.add('js-flatpickr-enabled');
+        el.classList.add('js-flatpickr-enabled'); // Init it
 
-        // Init it
         flatpickr(el);
       });
     }
-
     /*
      ********************************************************************************************
      *
@@ -3847,6 +3824,7 @@ var Helpers = /*#__PURE__*/function () {
      * <div class="invisible" data-toggle="appear">...</div>
      *
      */
+
   }, {
     key: "jqAppear",
     value: function jqAppear() {
@@ -3856,9 +3834,8 @@ var Helpers = /*#__PURE__*/function () {
         var el = jQuery(element);
         var elCssClass = el.data('class') || 'animated fadeIn';
         var elOffset = el.data('offset') || 0;
-        var elTimeout = windowW < 992 ? 0 : el.data('timeout') ? el.data('timeout') : 0;
+        var elTimeout = windowW < 992 ? 0 : el.data('timeout') ? el.data('timeout') : 0; // Add .js-appear-enabled class to tag it as activated and init it
 
-        // Add .js-appear-enabled class to tag it as activated and init it
         el.addClass('js-appear-enabled').appear(function () {
           setTimeout(function () {
             el.removeClass('invisible').addClass(elCssClass);
@@ -3868,7 +3845,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Magnific Popup functionality, for more examples you can check out http://dimsemenov.com/plugins/magnific-popup/
      *
@@ -3879,6 +3855,7 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Gallery page in Components for complete markup examples
      *
      */
+
   }, {
     key: "jqMagnific",
     value: function jqMagnific() {
@@ -3894,7 +3871,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Slick init, for more examples you can check out http://kenwheeler.github.io/slick/
      *
@@ -3909,14 +3885,14 @@ var Helpers = /*#__PURE__*/function () {
      * </div>
      *
      */
+
   }, {
     key: "jqSlick",
     value: function jqSlick() {
       // Get each slider element (with .js-slider class)
       jQuery('.js-slider:not(.js-slider-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-slider-enabled class to tag it as activated and init it
 
-        // Add .js-slider-enabled class to tag it as activated and init it
         el.addClass('js-slider-enabled').slick({
           arrows: el.data('arrows') || false,
           dots: el.data('dots') || false,
@@ -3928,7 +3904,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Bootstrap Datepicker init, for more examples you can check out https://github.com/eternicode/bootstrap-datepicker
      *
@@ -3939,24 +3914,24 @@ var Helpers = /*#__PURE__*/function () {
      * <input type="text" class="js-datepicker form-control">
      *
      */
+
   }, {
     key: "jqDatepicker",
     value: function jqDatepicker() {
       // Init datepicker (with .js-datepicker and .input-daterange class)
       jQuery('.js-datepicker:not(.js-datepicker-enabled)').add('.input-daterange:not(.js-datepicker-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-datepicker-enabled class to tag it as activated and init it
 
-        // Add .js-datepicker-enabled class to tag it as activated and init it
         el.addClass('js-datepicker-enabled').datepicker({
           weekStart: el.data('week-start') || 0,
           autoclose: el.data('autoclose') || false,
           todayHighlight: el.data('today-highlight') || false,
           container: el.data('container') || '#page-container',
           orientation: 'bottom' // Position issue when using BS5, set it to bottom until officially supported
+
         });
       });
     }
-
     /*
      * Bootstrap Colorpicker init, for more examples you can check out https://github.com/itsjavi/bootstrap-colorpicker/
      *
@@ -3967,6 +3942,7 @@ var Helpers = /*#__PURE__*/function () {
      * <input type="text" class="js-colorpicker form-control" value="#db4a39">
      *
      */
+
   }, {
     key: "jqColorpicker",
     value: function jqColorpicker() {
@@ -3978,7 +3954,6 @@ var Helpers = /*#__PURE__*/function () {
         }, 500);
       });
     }
-
     /*
      * Masked Inputs, for more examples you can check out https://github.com/digitalBush/jquery.maskedinput
      *
@@ -3989,6 +3964,7 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Form plugins page for complete markup examples
      *
      */
+
   }, {
     key: "jqMaskedInputs",
     value: function jqMaskedInputs() {
@@ -4006,7 +3982,6 @@ var Helpers = /*#__PURE__*/function () {
       jQuery('.js-masked-time:not(.js-masked-enabled)').mask('99:99');
       jQuery('.js-masked-date').add('.js-masked-date-dash').add('.js-masked-phone').add('.js-masked-phdm-ext').add('.js-masked-taxid').add('.js-masked-ssn').add('.js-masked-pkey').add('.js-masked-time').addClass('js-masked-enabled');
     }
-
     /*
      * Select2, for more examples you can check out https://github.com/select2/select2
      *
@@ -4022,21 +3997,20 @@ var Helpers = /*#__PURE__*/function () {
      * </select>
      *
      */
+
   }, {
     key: "jqSelect2",
     value: function jqSelect2() {
       // Init Select2 (with .js-select2 class)
       jQuery('.js-select2:not(.js-select2-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-select2-enabled class to tag it as activated and init it
 
-        // Add .js-select2-enabled class to tag it as activated and init it
         el.addClass('js-select2-enabled').select2({
           placeholder: el.data('placeholder') || false,
           dropdownParent: el.data('container') || document.getElementById('page-container')
         });
       });
     }
-
     /*
      * Bootstrap Notify, for more examples you can check out http://bootstrap-growl.remabledesigns.com/
      *
@@ -4047,18 +4021,19 @@ var Helpers = /*#__PURE__*/function () {
      * Please check out the Notifications page for examples
      *
      */
+
   }, {
     key: "jqNotify",
     value: function jqNotify() {
       var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
       if (jQuery.isEmptyObject(options)) {
         // Init notifications (with .js-notify class)
         jQuery('.js-notify:not(.js-notify-enabled)').each(function (index, element) {
           // Add .js-notify-enabled class to tag it as activated and init it
           jQuery(element).addClass('js-notify-enabled').on('click.pixelcave.helpers', function (e) {
-            var el = jQuery(e.currentTarget);
+            var el = jQuery(e.currentTarget); // Create notification
 
-            // Create notification
             jQuery.notify({
               icon: el.data('icon') || '',
               message: el.data('message'),
@@ -4115,7 +4090,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       }
     }
-
     /*
      * Easy Pie Chart, for more examples you can check out http://rendro.github.io/easy-pie-chart/
      *
@@ -4128,14 +4102,14 @@ var Helpers = /*#__PURE__*/function () {
      * </div>
      *
      */
+
   }, {
     key: "jqEasyPieChart",
     value: function jqEasyPieChart() {
       // Init Easy Pie Charts (with .js-pie-chart class)
       jQuery('.js-pie-chart:not(.js-pie-chart-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-pie-chart-enabled class to tag it as activated and init it
 
-        // Add .js-pie-chart-enabled class to tag it as activated and init it
         el.addClass('js-pie-chart-enabled').easyPieChart({
           barColor: el.data('bar-color') || '#777777',
           trackColor: el.data('track-color') || '#eeeeee',
@@ -4146,7 +4120,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Bootstrap Maxlength, for more examples you can check out https://github.com/mimo84/bootstrap-maxlength
      *
@@ -4157,14 +4130,14 @@ var Helpers = /*#__PURE__*/function () {
      * <input type="text" class="js-maxlength form-control" maxlength="20">
      *
      */
+
   }, {
     key: "jqMaxlength",
     value: function jqMaxlength() {
       // Init Bootstrap Maxlength (with .js-maxlength class)
       jQuery('.js-maxlength:not(.js-maxlength-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-maxlength-enabled class to tag it as activated and init it
 
-        // Add .js-maxlength-enabled class to tag it as activated and init it
         el.addClass('js-maxlength-enabled').maxlength({
           alwaysShow: el.data('always-show') ? true : false,
           threshold: el.data('threshold') || 10,
@@ -4177,7 +4150,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * Ion Range Slider, for more examples you can check out https://github.com/IonDen/ion.rangeSlider
      *
@@ -4188,21 +4160,20 @@ var Helpers = /*#__PURE__*/function () {
      * <input type="text" class="js-rangeslider form-control" value="50">
      *
      */
+
   }, {
     key: "jqRangeslider",
     value: function jqRangeslider() {
       // Init Ion Range Slider (with .js-rangeslider class)
       jQuery('.js-rangeslider:not(.js-rangeslider-enabled)').each(function (index, element) {
-        var el = jQuery(element);
+        var el = jQuery(element); // Add .js-rangeslider-enabled class to tag it as activated and init it
 
-        // Add .js-rangeslider-enabled class to tag it as activated and init it
         jQuery(element).addClass('js-rangeslider-enabled').ionRangeSlider({
           input_values_separator: ';',
           skin: el.data('skin') || 'round'
         });
       });
     }
-
     /*
      * Password Strength Meter, for more examples you can check out https://github.com/ablanco/jquery.pwstrength.bootstrap
      *
@@ -4218,6 +4189,7 @@ var Helpers = /*#__PURE__*/function () {
      * </div>
      *
      */
+
   }, {
     key: "jqPwStrength",
     value: function jqPwStrength() {
@@ -4226,9 +4198,8 @@ var Helpers = /*#__PURE__*/function () {
         var el = jQuery(element);
         var container = el.parents('.js-pw-strength-container');
         var progress = jQuery('.js-pw-strength-progress', container);
-        var verdict = jQuery('.js-pw-strength-feedback', container);
+        var verdict = jQuery('.js-pw-strength-feedback', container); // Add .js-pw-strength-enabled class to tag it as activated and init it
 
-        // Add .js-pw-strength-enabled class to tag it as activated and init it
         el.addClass('js-pw-strength-enabled').pwstrength({
           ui: {
             container: container,
@@ -4240,7 +4211,6 @@ var Helpers = /*#__PURE__*/function () {
         });
       });
     }
-
     /*
      * jQuery Sparkline Charts, for more examples you can check out http://omnipotent.net/jquery.sparkline/#s-docs
      *
@@ -4251,18 +4221,17 @@ var Helpers = /*#__PURE__*/function () {
      * <span class="js-sparkline" data-type="line" data-points="[10,20,30,25,15,40,45]"></span>
      *
      */
+
   }, {
     key: "jqSparkline",
     value: function jqSparkline() {
-      var self = this;
+      var self = this; // Init jQuery Sparkline Charts (with .js-sparkline class)
 
-      // Init jQuery Sparkline Charts (with .js-sparkline class)
       jQuery('.js-sparkline:not(.js-sparkline-enabled)').each(function (index, element) {
         var el = jQuery(element);
         var type = el.data('type');
-        var options = {};
+        var options = {}; // Sparkline types
 
-        // Sparkline types
         var types = {
           line: function line() {
             options['type'] = type;
@@ -4297,35 +4266,32 @@ var Helpers = /*#__PURE__*/function () {
             options['posBarColor'] = el.data('pos-bar-color') || '#82b54b';
             options['negBarColor'] = el.data('neg-bar-color') || '#e04f1a';
           }
-        };
+        }; // If the correct type is set init the chart
 
-        // If the correct type is set init the chart
         if (types[type]) {
-          types[type]();
+          types[type](); // Extra options added only if specified
 
-          // Extra options added only if specified
           if (type === 'line') {
             if (el.data('chart-range-min') >= 0 || el.data('chart-range-min')) {
               options['chartRangeMin'] = el.data('chart-range-min');
             }
+
             if (el.data('chart-range-max') >= 0 || el.data('chart-range-max')) {
               options['chartRangeMax'] = el.data('chart-range-max');
             }
-          }
+          } // Add common options used in all types
 
-          // Add common options used in all types
+
           options['width'] = el.data('width') || '120px';
           options['height'] = el.data('height') || '80px';
           options['tooltipPrefix'] = el.data('tooltip-prefix') ? el.data('tooltip-prefix') + ' ' : '';
-          options['tooltipSuffix'] = el.data('tooltip-suffix') ? ' ' + el.data('tooltip-suffix') : '';
+          options['tooltipSuffix'] = el.data('tooltip-suffix') ? ' ' + el.data('tooltip-suffix') : ''; // If we need a responsive width for the chart, then don't add .js-sparkline-enabled class and re-run the helper on window resize
 
-          // If we need a responsive width for the chart, then don't add .js-sparkline-enabled class and re-run the helper on window resize
           if (options['width'] === '100%') {
             if (!jqSparklineResize) {
               // Make sure that we bind the event only once
-              jqSparklineResize = true;
+              jqSparklineResize = true; // On window resize, re-run the Sparkline helper
 
-              // On window resize, re-run the Sparkline helper
               jQuery(window).on('resize.pixelcave.helpers.sparkline', function (e) {
                 clearTimeout(jqSparklineTimeout);
                 jqSparklineTimeout = setTimeout(function () {
@@ -4336,16 +4302,15 @@ var Helpers = /*#__PURE__*/function () {
           } else {
             // It has a specific width (it doesn't need to re-init again on resize), so add .js-sparkline-enabled class to tag it as activated
             jQuery(element).addClass('js-sparkline-enabled');
-          }
+          } // Finally init it
 
-          // Finally init it
+
           jQuery(element).sparkline(el.data('points') || [0], options);
         } else {
           console.log('[jQuery Sparkline JS Helper] Please add a correct type (line, bar, pie or tristate) in all your elements with \'js-sparkline\' class.');
         }
       });
     }
-
     /*
      * jQuery Validation, for more examples you can check out https://github.com/jzaefferer/jquery-validation
      *
@@ -4356,6 +4321,7 @@ var Helpers = /*#__PURE__*/function () {
      * By calling the helper, you set up the default options that will be used for jQuery Validation
      *
      */
+
   }, {
     key: "jqValidation",
     value: function jqValidation() {
@@ -4377,8 +4343,10 @@ var Helpers = /*#__PURE__*/function () {
       });
     }
   }]);
+
   return Helpers;
 }();
+
 
 
 /***/ }),
@@ -4396,23 +4364,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 /* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "./resources/js/dashmix/modules/helpers.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 /*
  *  Document   : template.js
  *  Author     : pixelcave
  *  Description: UI Framework custom functionality
  *
  */
-
 // Imports
 
+ // Assignments
 
+window.bootstrap = bootstrap__WEBPACK_IMPORTED_MODULE_0__; // Template
 
-// Assignments
-window.bootstrap = bootstrap__WEBPACK_IMPORTED_MODULE_0__;
-
-// Template
 var Template = /*#__PURE__*/function () {
   /*
    * Auto called when creating a new instance
@@ -4420,13 +4388,15 @@ var Template = /*#__PURE__*/function () {
    */
   function Template() {
     _classCallCheck(this, Template);
+
     this.onLoad(this._uiInit());
   }
-
   /*
    * Init all vital functionality
    *
    */
+
+
   _createClass(Template, [{
     key: "_uiInit",
     value: function _uiInit() {
@@ -4444,55 +4414,59 @@ var Template = /*#__PURE__*/function () {
       this._lHeaderSearchInput = document.getElementById('page-header-search-input');
       this._lHeaderLoader = document.getElementById('page-header-loader');
       this._lMain = document.getElementById('main-container');
-      this._lFooter = document.getElementById('page-footer');
+      this._lFooter = document.getElementById('page-footer'); // Helper variables
 
-      // Helper variables
       this._lSidebarScroll = false;
-      this._lSideOverlayScroll = false;
+      this._lSideOverlayScroll = false; // Base UI Init
 
-      // Base UI Init
       this._uiHandleTheme();
+
       this._uiHandleDarkMode();
+
       this._uiHandleSidebars();
+
       this._uiHandleHeader();
-      this._uiHandleNav();
 
-      // API Init
+      this._uiHandleNav(); // API Init
+
+
       this._uiApiLayout();
-      this._uiApiBlocks();
 
-      // Init the following helpers by default
-      this.helpers(['bs-tooltip', 'bs-popover', 'dm-toggle-class', 'dm-year-copy', 'dm-ripple']);
+      this._uiApiBlocks(); // Init the following helpers by default
 
-      // Page Loader (hide it)
+
+      this.helpers(['bs-tooltip', 'bs-popover', 'dm-toggle-class', 'dm-year-copy', 'dm-ripple']); // Page Loader (hide it)
+
       this._uiHandlePageLoader();
     }
-
     /*
      * Handles sidebar and side overlay scrolling functionality/styles
      *
      */
+
   }, {
     key: "_uiHandleSidebars",
     value: function _uiHandleSidebars() {
       var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'init';
       var self = this;
+
       if (self._lSidebar || self._lSideOverlay) {
         if (mode === 'init') {
           // Add 'side-trans-enabled' class to #page-container (enables sidebar and side overlay transition on open/close)
           // Fixes IE10, IE11 and Edge bug in which animation was executed on each page load
-          self._lPage.classList.add('side-trans-enabled');
+          self._lPage.classList.add('side-trans-enabled'); // Remove side transitions on window resizing
 
-          // Remove side transitions on window resizing
+
           window.addEventListener('resize', function () {
             clearTimeout(self._lResize);
+
             self._lPage.classList.remove('side-trans-enabled');
+
             self._lResize = setTimeout(function () {
               self._lPage.classList.add('side-trans-enabled');
             }, 500);
-          });
+          }); // Init custom scrolling
 
-          // Init custom scrolling
           this._uiHandleSidebars('custom-scroll');
         } else if (mode = 'custom-scroll') {
           // If .side-scroll is added to #page-container, enable custom scrolling
@@ -4500,9 +4474,9 @@ var Template = /*#__PURE__*/function () {
             // Init custom scrolling on Sidebar
             if (self._lSidebar && !self._lSidebarScroll) {
               self._lSidebarScroll = new SimpleBar(self._lSidebarScrollCon);
-            }
+            } // Init custom scrolling on Side Overlay
 
-            // Init custom scrolling on Side Overlay
+
             if (self._lSideOverlay && !self._lSideOverlayScroll) {
               self._lSideOverlayScroll = new SimpleBar(self._lSideOverlay);
             }
@@ -4510,17 +4484,16 @@ var Template = /*#__PURE__*/function () {
         }
       }
     }
-
     /*
      * Handles header related classes
      *
      */
+
   }, {
     key: "_uiHandleHeader",
     value: function _uiHandleHeader() {
-      var self = this;
+      var self = this; // If the header is fixed and has the glass style, add the related class on scrolling to add a background color to the header
 
-      // If the header is fixed and has the glass style, add the related class on scrolling to add a background color to the header
       if (self._lPage.classList.contains('page-header-glass') && self._lPage.classList.contains('page-header-fixed')) {
         window.addEventListener('scroll', function (e) {
           if (window.scrollY > 60) {
@@ -4532,29 +4505,27 @@ var Template = /*#__PURE__*/function () {
         window.dispatchEvent(new CustomEvent('scroll'));
       }
     }
-
     /*
      * Toggle Submenu functionality
      *
      */
+
   }, {
     key: "_uiHandleNav",
     value: function _uiHandleNav() {
-      var links = document.querySelectorAll('[data-toggle="submenu"]');
+      var links = document.querySelectorAll('[data-toggle="submenu"]'); // When a submenu link is clicked
 
-      // When a submenu link is clicked
       if (links) {
         links.forEach(function (link) {
           link.addEventListener('click', function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Get main navigation
 
-            // Get main navigation
-            var mainNav = link.closest('.nav-main');
+            var mainNav = link.closest('.nav-main'); // Check if we are in horizontal navigation, large screen and hover is enabled
 
-            // Check if we are in horizontal navigation, large screen and hover is enabled
             if (!((window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) > 991 && mainNav.classList.contains('nav-main-horizontal') && mainNav.classList.contains('nav-main-hover'))) {
               // Get link's parent
               var parentLi = link.closest('li');
+
               if (parentLi.classList.contains('open')) {
                 // If submenu is open, close it..
                 parentLi.classList.remove('open');
@@ -4568,36 +4539,44 @@ var Template = /*#__PURE__*/function () {
                 link.setAttribute('aria-expanded', 'true');
               }
             }
+
             return false;
           });
         });
       }
     }
-
     /*
      * Page loading screen functionality
      *
      */
+
   }, {
     key: "_uiHandlePageLoader",
     value: function _uiHandlePageLoader() {
       var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'hide';
       var colorClass = arguments.length > 1 ? arguments[1] : undefined;
+
       if (mode === 'show') {
         if (this._lpageLoader) {
           if (colorClass) {
             this._lpageLoader.className = '';
+
             this._lpageLoader.classList.add(colorClass);
           }
+
           this._lpageLoader.classList.add('show');
         } else {
           var pageLoader = document.createElement('div');
           pageLoader.id = 'page-loader';
+
           if (colorClass) {
             pageLoader.classList.add(colorClass);
           }
+
           pageLoader.classList.add('show');
+
           this._lPage.insertBefore(pageLoader, this._lPage.firstChild);
+
           this._lpageLoader = document.getElementById('page-loader');
         }
       } else if (mode === 'hide') {
@@ -4606,39 +4585,42 @@ var Template = /*#__PURE__*/function () {
         }
       }
     }
-
     /*
      * Saves/Retrieves Dark Mode preference to local storage
      *
      */
+
   }, {
     key: "_uiHandleDarkMode",
     value: function _uiHandleDarkMode() {
       var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'init';
-      var self = this;
-
-      // If dark mode is not enabled by default remember default sidebar
+      var self = this; // If dark mode is not enabled by default remember default sidebar
       // and header style to return to after any possible dark mode disabling
+
       if (mode === 'init' && !self._lPage.classList.contains('dark-mode')) {
         if (self._lPage.classList.contains('sidebar-dark')) {
           localStorage.setItem('dashmixDefaultsSidebarDark', true);
         } else {
           localStorage.removeItem('dashmixDefaultsSidebarDark');
         }
+
         if (self._lPage.classList.contains('page-header-dark')) {
           localStorage.setItem('dashmixDefaultsPageHeaderDark', true);
         } else {
           localStorage.removeItem('dashmixDefaultsPageHeaderDark');
         }
-      }
+      } // If remember-theme class is added in #page-container
 
-      // If remember-theme class is added in #page-container
+
       if (self._lPage.classList.contains('remember-theme')) {
         var darkMode = localStorage.getItem('dashmixDarkMode') || false;
+
         if (mode === 'init') {
           if (darkMode) {
             self._lPage.classList.add('sidebar-dark');
+
             self._lPage.classList.add('page-header-dark');
+
             self._lPage.classList.add('dark-mode');
           } else if (mode === 'init') {
             self._lPage.classList.remove('dark-mode');
@@ -4652,70 +4634,63 @@ var Template = /*#__PURE__*/function () {
         localStorage.removeItem('dashmixDarkMode');
       }
     }
-
     /*
      * Set active color theme functionality
      *
      */
+
   }, {
     key: "_uiHandleTheme",
     value: function _uiHandleTheme() {
       var self = this;
       var themeEl = document.getElementById('css-theme');
-      var rememberTheme = this._lPage.classList.contains('remember-theme') ? true : false;
+      var rememberTheme = this._lPage.classList.contains('remember-theme') ? true : false; // If remember theme is enabled
 
-      // If remember theme is enabled
       if (rememberTheme) {
-        var themeName = localStorage.getItem('dashmixThemeName') || false;
+        var themeName = localStorage.getItem('dashmixThemeName') || false; // Update color theme
 
-        // Update color theme
         if (themeName) {
           self._uiUpdateTheme(themeEl, themeName);
-        }
+        } // Update theme element
 
-        // Update theme element
+
         themeEl = document.getElementById('css-theme');
       } else {
         localStorage.removeItem('dashmixThemeName');
-      }
+      } // Set the active color theme link as active
 
-      // Set the active color theme link as active
+
       document.querySelectorAll('[data-toggle="theme"][data-theme="' + (themeEl ? themeEl.getAttribute('href') : 'default') + '"]').forEach(function (link) {
         link.classList.add('active');
-      });
+      }); // When a color theme link is clicked
 
-      // When a color theme link is clicked
       document.querySelectorAll('[data-toggle="theme"]').forEach(function (el) {
         el.addEventListener('click', function (e) {
-          e.preventDefault();
+          e.preventDefault(); // Get element's data
 
-          // Get element's data
-          var themeName = el.dataset.theme;
+          var themeName = el.dataset.theme; // Set this color theme link as active
 
-          // Set this color theme link as active
           document.querySelectorAll('[data-toggle="theme"]').forEach(function (link) {
             link.classList.remove('active');
           });
-          document.querySelector('[data-toggle="theme"][data-theme="' + themeName + '"]').classList.add('active');
+          document.querySelector('[data-toggle="theme"][data-theme="' + themeName + '"]').classList.add('active'); // Update color theme
 
-          // Update color theme
-          self._uiUpdateTheme(themeEl, themeName);
+          self._uiUpdateTheme(themeEl, themeName); // Update theme element
 
-          // Update theme element
-          themeEl = document.getElementById('css-theme');
 
-          // If remember theme is enabled, save the new active color theme
+          themeEl = document.getElementById('css-theme'); // If remember theme is enabled, save the new active color theme
+
           if (rememberTheme) {
             localStorage.setItem('dashmixThemeName', themeName);
           }
         });
       });
     }
-
     /*
      * Updates the color theme
      *
      */
+
   }, {
     key: "_uiUpdateTheme",
     value: function _uiUpdateTheme(themeEl, themeName) {
@@ -4735,37 +4710,38 @@ var Template = /*#__PURE__*/function () {
         }
       }
     }
-
     /*
      * Layout API
      *
      */
+
   }, {
     key: "_uiApiLayout",
     value: function _uiApiLayout() {
       var _this = this;
-      var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'init';
-      var self = this;
 
-      // API with object literals
+      var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'init';
+      var self = this; // API with object literals
+
       var layoutAPI = {
         init: function init() {
-          var buttons = document.querySelectorAll('[data-toggle="layout"]');
+          var buttons = document.querySelectorAll('[data-toggle="layout"]'); // Call layout API on button click
 
-          // Call layout API on button click
           if (buttons) {
             buttons.forEach(function (btn) {
               btn.addEventListener('click', function (e) {
                 self._uiApiLayout(btn.dataset.action);
               });
             });
-          }
+          } // Prepend Page Overlay div if enabled (used when Side Overlay opens)
 
-          // Prepend Page Overlay div if enabled (used when Side Overlay opens)
+
           if (self._lPage.classList.contains('enable-page-overlay')) {
             var pageOverlay = document.createElement('div');
             pageOverlay.id = 'page-overlay';
+
             self._lPage.insertBefore(pageOverlay, self._lPage.firstChild);
+
             document.getElementById('page-overlay').addEventListener('click', function (e) {
               self._uiApiLayout('side_overlay_close');
             });
@@ -4825,11 +4801,14 @@ var Template = /*#__PURE__*/function () {
         },
         sidebar_style_dark: function sidebar_style_dark() {
           self._lPage.classList.add('sidebar-dark');
+
           localStorage.setItem('dashmixDefaultsSidebarDark', true);
         },
         sidebar_style_light: function sidebar_style_light() {
           self._lPage.classList.remove('sidebar-dark');
+
           self._lPage.classList.remove('dark-mode');
+
           localStorage.removeItem('dashmixDefaultsSidebarDark');
         },
         side_overlay_toggle: function side_overlay_toggle() {
@@ -4846,6 +4825,7 @@ var Template = /*#__PURE__*/function () {
               self._uiApiLayout('side_overlay_close');
             }
           });
+
           self._lPage.classList.add('side-overlay-o');
         },
         side_overlay_close: function side_overlay_close() {
@@ -4862,14 +4842,17 @@ var Template = /*#__PURE__*/function () {
         },
         header_glass_toggle: function header_glass_toggle() {
           self._lPage.classList.toggle('page-header-glass');
+
           self._uiHandleHeader();
         },
         header_glass_on: function header_glass_on() {
           self._lPage.classList.add('page-header-glass');
+
           self._uiHandleHeader();
         },
         header_glass_off: function header_glass_off() {
           self._lPage.classList.remove('page-header-glass');
+
           self._uiHandleHeader();
         },
         header_mode_toggle: function header_mode_toggle() {
@@ -4890,18 +4873,22 @@ var Template = /*#__PURE__*/function () {
         },
         header_style_dark: function header_style_dark() {
           self._lPage.classList.add('page-header-dark');
+
           localStorage.setItem('dashmixDefaultsPageHeaderDark', true);
         },
         header_style_light: function header_style_light() {
           self._lPage.classList.remove('page-header-dark');
+
           self._lPage.classList.remove('dark-mode');
+
           localStorage.removeItem('dashmixDefaultsPageHeaderDark');
         },
         header_search_on: function header_search_on() {
           self._lHeaderSearch.classList.add('show');
-          self._lHeaderSearchInput.focus();
 
-          // When ESCAPE key is hit close the search section
+          self._lHeaderSearchInput.focus(); // When ESCAPE key is hit close the search section
+
+
           document.addEventListener('keydown', function (e) {
             if (e.key === 'Esc' || e.key === 'Escape') {
               self._uiApiLayout('header_search_off');
@@ -4910,6 +4897,7 @@ var Template = /*#__PURE__*/function () {
         },
         header_search_off: function header_search_off() {
           self._lHeaderSearch.classList.remove('show');
+
           self._lHeaderSearchInput.blur();
         },
         header_loader_on: function header_loader_on() {
@@ -4927,18 +4915,24 @@ var Template = /*#__PURE__*/function () {
         },
         dark_mode_on: function dark_mode_on() {
           self._lPage.classList.add('sidebar-dark');
+
           self._lPage.classList.add('page-header-dark');
+
           self._lPage.classList.add('dark-mode');
+
           _this._uiHandleDarkMode('on');
         },
         dark_mode_off: function dark_mode_off() {
           if (!localStorage.getItem('dashmixDefaultsSidebarDark')) {
             self._lPage.classList.remove('sidebar-dark');
           }
+
           if (!localStorage.getItem('dashmixDefaultsPageHeaderDark')) {
             self._lPage.classList.remove('page-header-dark');
           }
+
           self._lPage.classList.remove('dark-mode');
+
           _this._uiHandleDarkMode('off');
         },
         content_layout_toggle: function content_layout_toggle() {
@@ -4952,47 +4946,47 @@ var Template = /*#__PURE__*/function () {
         },
         content_layout_boxed: function content_layout_boxed() {
           self._lPage.classList.remove('main-content-narrow');
+
           self._lPage.classList.add('main-content-boxed');
         },
         content_layout_narrow: function content_layout_narrow() {
           self._lPage.classList.remove('main-content-boxed');
+
           self._lPage.classList.add('main-content-narrow');
         },
         content_layout_full_width: function content_layout_full_width() {
           self._lPage.classList.remove('main-content-boxed');
+
           self._lPage.classList.remove('main-content-narrow');
         }
-      };
+      }; // Call layout API
 
-      // Call layout API
       if (layoutAPI[mode]) {
         layoutAPI[mode]();
       }
     }
-
     /*
      * Blocks API
      *
      */
+
   }, {
     key: "_uiApiBlocks",
     value: function _uiApiBlocks() {
       var _this2 = this;
+
       var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'init';
       var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-      var self = this;
+      var self = this; // Helper variables
 
-      // Helper variables
-      var elBlock, btnFullscreen, btnContentToggle;
+      var elBlock, btnFullscreen, btnContentToggle; // Set default icons for fullscreen and content toggle buttons
 
-      // Set default icons for fullscreen and content toggle buttons
       var iconBase = 'si';
       var iconFullscreen = 'si-size-fullscreen';
       var iconFullscreenActive = 'si-size-actual';
       var iconContent = 'si-arrow-up';
-      var iconContentActive = 'si-arrow-down';
+      var iconContentActive = 'si-arrow-down'; // API with object literals
 
-      // API with object literals
       var blockAPI = {
         init: function init() {
           // Auto add the default toggle icons to fullscreen and content toggle buttons
@@ -5001,9 +4995,8 @@ var Template = /*#__PURE__*/function () {
           });
           document.querySelectorAll('[data-toggle="block-option"][data-action="content_toggle"]').forEach(function (btn) {
             btn.innerHTML = '<i class="' + iconBase + ' ' + (btn.closest('.block').classList.contains('block-mode-hidden') ? iconContentActive : iconContent) + '"></i>';
-          });
+          }); // Call blocks API on option button click
 
-          // Call blocks API on option button click
           document.querySelectorAll('[data-toggle="block-option"]').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
               _this2._uiApiBlocks(btn.dataset.action, btn.closest('.block'));
@@ -5012,9 +5005,8 @@ var Template = /*#__PURE__*/function () {
         },
         fullscreen_toggle: function fullscreen_toggle() {
           elBlock.classList.remove('block-mode-pinned');
-          elBlock.classList.toggle('block-mode-fullscreen');
+          elBlock.classList.toggle('block-mode-fullscreen'); // Update block option icon
 
-          // Update block option icon
           if (btnFullscreen) {
             if (elBlock.classList.contains('block-mode-fullscreen')) {
               btnFullscreen && btnFullscreen.querySelector('i').classList.replace(iconFullscreen, iconFullscreenActive);
@@ -5025,21 +5017,18 @@ var Template = /*#__PURE__*/function () {
         },
         fullscreen_on: function fullscreen_on() {
           elBlock.classList.remove('block-mode-pinned');
-          elBlock.classList.add('block-mode-fullscreen');
+          elBlock.classList.add('block-mode-fullscreen'); // Update block option icon
 
-          // Update block option icon
           btnFullscreen && btnFullscreen.querySelector('i').classList.replace(iconFullscreen, iconFullscreenActive);
         },
         fullscreen_off: function fullscreen_off() {
-          elBlock.classList.remove('block-mode-fullscreen');
+          elBlock.classList.remove('block-mode-fullscreen'); // Update block option icon
 
-          // Update block option icon
           btnFullscreen && btnFullscreen.querySelector('i').classList.replace(iconFullscreenActive, iconFullscreen);
         },
         content_toggle: function content_toggle() {
-          elBlock.classList.toggle('block-mode-hidden');
+          elBlock.classList.toggle('block-mode-hidden'); // Update block option icon
 
-          // Update block option icon
           if (btnContentToggle) {
             if (elBlock.classList.contains('block-mode-hidden')) {
               btnContentToggle.querySelector('i').classList.replace(iconContent, iconContentActive);
@@ -5049,21 +5038,18 @@ var Template = /*#__PURE__*/function () {
           }
         },
         content_hide: function content_hide() {
-          elBlock.classList.add('block-mode-hidden');
+          elBlock.classList.add('block-mode-hidden'); // Update block option icon
 
-          // Update block option icon
           btnContentToggle && btnContentToggle.querySelector('i').classList.replace(iconContent, iconContentActive);
         },
         content_show: function content_show() {
-          elBlock.classList.remove('block-mode-hidden');
+          elBlock.classList.remove('block-mode-hidden'); // Update block option icon
 
-          // Update block option icon
           btnContentToggle && btnContentToggle.querySelector('i').classList.replace(iconContentActive, iconContent);
         },
         state_toggle: function state_toggle() {
-          elBlock.classList.toggle('block-mode-loading');
+          elBlock.classList.toggle('block-mode-loading'); // Return block to normal state if the demostration mode is on in the refresh option button - data-action-mode="demo"
 
-          // Return block to normal state if the demostration mode is on in the refresh option button - data-action-mode="demo"
           if (elBlock.querySelector('[data-toggle="block-option"][data-action="state_toggle"][data-action-mode="demo"]')) {
             setTimeout(function () {
               elBlock.classList.remove('block-mode-loading');
@@ -5094,27 +5080,25 @@ var Template = /*#__PURE__*/function () {
           elBlock.classList.remove('d-none');
         }
       };
+
       if (mode === 'init') {
         // Call Block API
         blockAPI[mode]();
       } else {
         // Get block element
-        elBlock = block instanceof Element ? block : document.querySelector("".concat(block));
+        elBlock = block instanceof Element ? block : document.querySelector("".concat(block)); // If element exists, procceed with block functionality
 
-        // If element exists, procceed with block functionality
         if (elBlock) {
           // Get block option buttons if exist (need them to update their icons)
           btnFullscreen = elBlock.querySelector('[data-toggle="block-option"][data-action="fullscreen_toggle"]');
-          btnContentToggle = elBlock.querySelector('[data-toggle="block-option"][data-action="content_toggle"]');
+          btnContentToggle = elBlock.querySelector('[data-toggle="block-option"][data-action="content_toggle"]'); // Call Block API
 
-          // Call Block API
           if (blockAPI[mode]) {
             blockAPI[mode]();
           }
         }
       }
     }
-
     /*
      ********************************************************************************************
      *
@@ -5127,6 +5111,7 @@ var Template = /*#__PURE__*/function () {
      * On DOM content loaded
      *
      */
+
   }, {
     key: "onLoad",
     value: function onLoad(fn) {
@@ -5136,7 +5121,6 @@ var Template = /*#__PURE__*/function () {
         document.addEventListener('DOMContentLoaded', fn);
       }
     }
-
     /*
      ********************************************************************************************
      *
@@ -5149,57 +5133,58 @@ var Template = /*#__PURE__*/function () {
      * Init base functionality
      *
      */
+
   }, {
     key: "init",
     value: function init() {
       this._uiInit();
     }
-
     /*
      * Layout API
      *
      */
+
   }, {
     key: "layout",
     value: function layout(mode) {
       this._uiApiLayout(mode);
     }
-
     /*
      * Blocks API
      *
      */
+
   }, {
     key: "block",
     value: function block(mode, _block) {
       this._uiApiBlocks(mode, _block);
     }
-
     /*
      * Handle Page Loader
      *
      */
+
   }, {
     key: "loader",
     value: function loader(mode, colorClass) {
       this._uiHandlePageLoader(mode, colorClass);
     }
-
     /*
      * Run Helpers
      *
      */
+
   }, {
     key: "helpers",
     value: function helpers(_helpers) {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       _helpers__WEBPACK_IMPORTED_MODULE_1__["default"].run(_helpers, options);
     }
-
     /*
      * Run Helpers on DOM content loaded
      *
      */
+
   }, {
     key: "helpersOnLoad",
     value: function helpersOnLoad(helpers) {
@@ -5209,8 +5194,10 @@ var Template = /*#__PURE__*/function () {
       });
     }
   }]);
+
   return Template;
 }();
+
 
 
 /***/ }),
@@ -10527,39 +10514,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _modules_template__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/template */ "./resources/js/dashmix/modules/template.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 /*
  *  Document   : app.js
  *  Author     : pixelcave
  *  Description: Main entry point
  *
  */
-
 // Import required modules
+ // App extends Template
 
-
-// App extends Template
 var App = /*#__PURE__*/function (_Template) {
   _inherits(App, _Template);
+
   var _super = _createSuper(App);
+
   /*
    * Auto called when creating a new instance
    *
    */
   function App() {
     _classCallCheck(this, App);
+
     return _super.call(this);
   }
-
   /*
    *  Here you can override or extend any function you want from Template class
    *  if you would like to change/extend/remove the default functionality.
@@ -10577,14 +10575,12 @@ var App = /*#__PURE__*/function (_Template) {
    * EXAMPLE #1 - Removing default functionality by making it empty
    *
    */
-
   //  _uiInit() {}
 
   /*
    * EXAMPLE #2 - Extending default functionality with additional code
    *
    */
-
   //  _uiInit() {
   //      // Call original function
   //      super._uiInit();
@@ -10596,12 +10592,15 @@ var App = /*#__PURE__*/function (_Template) {
    * EXAMPLE #3 - Replacing default functionality by writing your own code
    *
    */
-
   //  _uiInit() {
   //      // Your own JS code without ever calling the original function's code
   //  }
+
+
   return _createClass(App);
 }(_modules_template__WEBPACK_IMPORTED_MODULE_0__["default"]); // Create a new instance of App
+
+
 
 window.Dashmix = new App();
 })();
