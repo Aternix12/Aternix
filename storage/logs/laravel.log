@@ -15942,3 +15942,12 @@ Stack trace:
 #47 C:\\Websites\\Aternix\\server.php(21): require_once('C:\\\\Websites\\\\Ate...')
 #48 {main}
 "}
+[2022-11-07 05:00:34] local.ERROR: Command "composer" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"composer\" is not defined. at C:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:718)
+[stacktrace]
+#0 C:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('composer')
+#1 C:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
