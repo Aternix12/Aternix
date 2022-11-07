@@ -25,6 +25,7 @@
 </div>
 
 <div id="main">
+    <h2 id="runes" class="hidden">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</h2>
 <div class="row items-push">
   <div class="col-md-6 hidden">
     <a
@@ -33,7 +34,7 @@
       style="background-image: url('/media/photos/WarInSpace.png');">
       <div class="block-content bg-black-50">
         <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
-          <p><span class="badge bg-primary fw-bold p-2 text-uppercase">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</span></p>
+          <p><span class="badge bg-primary fw-bold p-2 text-uppercase">2018</span></p>
 
           <p class="fs-sm">
             <span class="text-white fw-semibold me-1">

@@ -62,7 +62,7 @@ svg {
     color: red;
 }
 
-.row {
+.header-row {
     margin: 0 !important;
 }
 
@@ -91,6 +91,7 @@ canvas {
     text-shadow: 1px 1px darkred;
     color: white;
     background: -webkit-linear-gradient(#000, #333);
+    background-clip: text;
     -webkit-background-clip: text;
     filter: drop-shadow(2px 2px black);
 }
@@ -172,4 +173,20 @@ small {
 .show{
     opacity: 1;
     filter: blur(0);
+}
+
+.os-scrollbar-track {
+    mix-blend-mode: difference;
+    background-color: rgba(127,127,127,.155);
+}
+#runes{
+    font-family: "FreeMono" !important;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align:top;
+    -webkit-font-smoothing: antialiased;
+    background: -webkit-linear-gradient(#000, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(2px 2px black);
 }

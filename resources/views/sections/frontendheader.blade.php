@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row header-row">
   <div class="col-md-2 frontend-header">
 
     <a
