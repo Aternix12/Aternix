@@ -34,6 +34,8 @@
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+
 
     <script>
         window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};

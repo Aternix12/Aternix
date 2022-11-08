@@ -67,24 +67,25 @@ span {
 
 }
 
-.main-menu-link>span{
+.main-menu-link>span {
     font-family: "Iceland";
     color: #f1f1f1;
     font-size: 20px;
 }
 
-p{
+p {
     font-family: "Electrolize";
     color: #f1f1f1;
 }
 
-h3{
+h3 {
     font-family: "Iceland";
     color: #f1f1f1;
     font-size: 32px;
+    filter: drop-shadow(2px 2px black);
 }
 
-a{
+a {
     font-family: "Electrolize";
     color: #f1f1f1;
 }
@@ -129,7 +130,7 @@ canvas {
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px darkred;
-    color: white;
+    color: #f1f1f1;
     background: -webkit-linear-gradient(#000, #333);
     background-clip: text;
     -webkit-background-clip: text;
@@ -199,40 +200,109 @@ small {
     margin-top: -5%;
 
 }
-.video-container{
-    background-image: linear-gradient(to bottom, black , #0E0E10);
+
+.video-container {
+    background-image: linear-gradient(to bottom, black, #0E0E10);
     margin-top: -5%;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     filter: blur(5px);
     transition: all 1s;
 }
 
-.show{
+.show {
     opacity: 1;
     filter: blur(0);
 }
 
 .os-scrollbar-track {
     mix-blend-mode: difference;
-    background-color: rgba(127,127,127,.155);
+    background-color: rgba(127, 127, 127, .155);
 }
-#runes{
+
+#runes {
     font-family: "FreeMono" !important;
     font-weight: 500;
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
     -webkit-font-smoothing: antialiased;
     background: -webkit-linear-gradient(#000, #333);
     background-clip: text;
     -webkit-background-clip: text;
     filter: drop-shadow(2px 2px black);
 }
-footer{
+
+footer {
     background-color: #101010;
 }
-#bottom-footer{
+
+#bottom-footer {
     background-color: #000;
 }
+
+.glowing-footer-menu-explore {
+    box-shadow: 0 10px 15px -10px red;
+    height: 11%;
+    width: fit-content;
+    clip-path: inset(0px 0px -20px 0px);
+
+}
+
+.glowing-footer-menu-company {
+    box-shadow: 0 10px 15px -10px orange;
+    height: 11%;
+    width: fit-content;
+    clip-path: inset(0px 0px -20px 0px);
+}
+
+.glowing-footer-menu-projects {
+    box-shadow: 0 10px 15px -10px yellow;
+    height: 11%;
+    width: fit-content;
+    clip-path: inset(0px 0px -20px 0px);
+}
+
+.glowing-footer-menu-legal {
+    box-shadow: 0 10px 15px -10px #00D100;
+    height: 11%;
+    width: fit-content;
+    clip-path: inset(0px 0px -20px 0px);
+}
+
+.glowing-footer-menu-socials {
+    box-shadow: 0 10px 15px -10px blue;
+    height: 11%;
+    width: fit-content;
+    clip-path: inset(0px 0px -20px 0px);
+}
+
+#footer-logo {
+    position: relative;
+    filter: drop-shadow(2px 2px black);
+    top: 50%;
+    transform: translateY(-50%);
+}
+svg.svg-inline--fa.fa-steam {
+    color: #1b2838;
+    font-size: 30px !important;
+}
+svg.svg-inline--fa.fa-itch-io {
+    color: #ff5c5b;
+    font-size: 30px !important;
+}
+svg.svg-inline--fa.fa-discord {
+    color: #7289da;
+    font-size: 30px !important;
+}
+svg.svg-inline--fa.fa-linkedin {
+    color: #0a66c2;
+    font-size: 30px !important;
+}
+iconify-icon {
+    color: #ef1c6e;
+    font-size: 30px !important;
+}
+
+
