@@ -3,6 +3,22 @@
     src: url('/fonts/Aternix-Regular.ttf');
 }
 
+@font-face {
+    font-family: FreeMono;
+    src: url('/fonts/FreeMono.otf');
+}
+
+@font-face {
+    font-family: Iceland;
+    src: url('/fonts/Iceland-Regular.ttf');
+}
+
+@font-face {
+    font-family: Electrolize;
+    src: url('/fonts/Electrolize-Regular.ttf');
+}
+
+
 #page-container {
     background-color: black;
 }
@@ -46,7 +62,31 @@
 }
 
 span {
-    color: white;
+    color: #f1f1f1;
+    font-family: "Electrolize";
+
+}
+
+.main-menu-link>span{
+    font-family: "Iceland";
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
+p{
+    font-family: "Electrolize";
+    color: #f1f1f1;
+}
+
+h3{
+    font-family: "Iceland";
+    color: #f1f1f1;
+    font-size: 32px;
+}
+
+a{
+    font-family: "Electrolize";
+    color: #f1f1f1;
 }
 
 ul {
@@ -189,4 +229,10 @@ small {
     background-clip: text;
     -webkit-background-clip: text;
     filter: drop-shadow(2px 2px black);
+}
+footer{
+    background-color: #101010;
+}
+#bottom-footer{
+    background-color: #000;
 }

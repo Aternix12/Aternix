@@ -115,6 +115,9 @@
             @yield('content')
         </main>
         <!-- END Main Container -->
+        <footer id="page-footer" class="footer-static">
+            @include('sections.frontendfooter')
+        </footer>
     </div>
     <!-- END Page Container -->
 
