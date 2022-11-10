@@ -64,7 +64,6 @@
 span {
     color: #f1f1f1;
     font-family: "Electrolize";
-
 }
 
 .main-menu-link>span {
@@ -112,9 +111,7 @@ canvas {
 }
 
 #main {
-    padding: 8% 12% 8% 12%;
     background-color: #0E0E10;
-
 }
 
 #aternixlogoheader {
@@ -241,39 +238,42 @@ footer {
 #bottom-footer {
     background-color: #000;
 }
+#bottom-footer-content{
+    padding: 28px;
+}
 
 .glowing-footer-menu-explore {
-    box-shadow: 0 10px 15px -10px red;
-    height: 11%;
+    box-shadow: 0 10px 10px -10px red;
+    height: 13.5%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
 
 }
 
 .glowing-footer-menu-company {
-    box-shadow: 0 10px 15px -10px orange;
-    height: 11%;
+    box-shadow: 0 10px 10px -10px orange;
+    height: 13.5%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
 }
 
 .glowing-footer-menu-projects {
-    box-shadow: 0 10px 15px -10px yellow;
-    height: 11%;
+    box-shadow: 0 10px 10px -10px yellow;
+    height: 13.5%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
 }
 
 .glowing-footer-menu-legal {
-    box-shadow: 0 10px 15px -10px #00D100;
-    height: 11%;
+    box-shadow: 0 10px 10px -10px #00D100;
+    height: 13.5%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
 }
 
 .glowing-footer-menu-socials {
-    box-shadow: 0 10px 15px -10px blue;
-    height: 11%;
+    box-shadow: 0 10px 10px -10px blue;
+    height: 13.5%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
 }
@@ -285,24 +285,58 @@ footer {
     transform: translateY(-50%);
 }
 svg.svg-inline--fa.fa-steam {
-    color: #1b2838;
-    font-size: 30px !important;
+    color: #324b6c;
 }
 svg.svg-inline--fa.fa-itch-io {
     color: #ff5c5b;
-    font-size: 30px !important;
 }
 svg.svg-inline--fa.fa-discord {
     color: #7289da;
-    font-size: 30px !important;
 }
 svg.svg-inline--fa.fa-linkedin {
     color: #0a66c2;
-    font-size: 30px !important;
+}
+svg.svg-inline--fa.fa-instagram {
+    color: #E1306C;
 }
 iconify-icon {
     color: #ef1c6e;
-    font-size: 30px !important;
+    margin-right: 15px;
 }
-
-
+#footer-socials{
+    display: flex;
+    font-size: 25px !important;
+    margin: 0;
+}
+.content{
+    max-width: 1400px !important;
+}
+main{
+    background-color: #0E0E10 !important;
+}
+h5{
+    font-family: "Iceland";
+    color: #f1f1f1;
+    font-size: 1.35rem;
+    margin-bottom: initial;
+}
+.block-title {
+    font-size: 32px;
+    line-height: initial;
+}
+a:hover{
+    color: darkgray;
+}
+.content-span{
+    font-size: 16px;
+}
+.minecraft-covers{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 47.5%
+}
+.vertical-center-col{
+    display: flex;
+    align-items: center;
+}

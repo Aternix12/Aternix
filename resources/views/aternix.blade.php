@@ -24,7 +24,7 @@
   </video>
 </div>
 
-<div id="main">
+<div id="main" class="content">
     <h2 id="runes" class="hidden">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</h2>
 <div class="row items-push">
   <div class="col-md-6 hidden">

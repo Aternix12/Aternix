@@ -30,7 +30,7 @@ Route::view('/about','pages/about');
 Route::view('/game-studio','pages/gamestudio');
 Route::view('/software','pages/software');
 Route::view('/websites','pages/websites');
-Route::view('/mc-server','pages/mcserver');
+Route::view('/mc-server','pages/mc-server');
 Route::view('/news','pages/news');
 Route::view('/forum','pages/forum');
 Route::view('/enquiry','pages/enquiry');
