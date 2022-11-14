@@ -145,10 +145,24 @@ canvas {
 
 #about-hero {
     align-items: flex-end;
+
+}
+
+#about-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/media/photos/about_hero.png);
+    background-size: cover;
+    background-position: top;
+    filter: blur(2px) grayscale(1);
 }
 
 .artist-info {
     text-align: center;
+    z-index: 10;
 }
 
 .artist-name {
@@ -190,7 +204,7 @@ small {
 .smoke {
     object-fit: fill;
     aspect-ratio: unset !important;
-    width: 1920px !important;
+    width: 100% !important;
     height: 200px !important;
     z-index: 50;
     filter: brightness(25%);
@@ -238,7 +252,8 @@ footer {
 #bottom-footer {
     background-color: #000;
 }
-#bottom-footer-content{
+
+#bottom-footer-content {
     padding: 28px;
 }
 
@@ -284,59 +299,74 @@ footer {
     top: 50%;
     transform: translateY(-50%);
 }
+
 svg.svg-inline--fa.fa-steam {
     color: #324b6c;
 }
+
 svg.svg-inline--fa.fa-itch-io {
     color: #ff5c5b;
 }
+
 svg.svg-inline--fa.fa-discord {
     color: #7289da;
 }
+
 svg.svg-inline--fa.fa-linkedin {
     color: #0a66c2;
 }
+
 svg.svg-inline--fa.fa-instagram {
     color: #E1306C;
 }
+
 iconify-icon {
     color: #ef1c6e;
     margin-right: 15px;
 }
-#footer-socials{
+
+#footer-socials {
     display: flex;
     font-size: 25px !important;
     margin: 0;
 }
-.content{
+
+.content {
     max-width: 1400px !important;
 }
-main{
+
+main {
     background-color: #0E0E10 !important;
 }
-h5{
+
+h5 {
     font-family: "Iceland";
     color: #f1f1f1;
     font-size: 1.35rem;
     margin-bottom: initial;
 }
+
 .block-title {
     font-size: 32px;
     line-height: initial;
 }
-a:hover{
+
+a:hover {
     color: darkgray;
 }
-.content-span{
+
+.content-span {
     font-size: 16px;
 }
-.minecraft-covers{
+
+.minecraft-covers {
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 47.5%
 }
-.vertical-center-col{
+
+.vertical-center-col {
     display: flex;
     align-items: center;
 }

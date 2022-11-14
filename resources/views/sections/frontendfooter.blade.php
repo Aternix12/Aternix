@@ -73,18 +73,18 @@
                 <h3 class="fw-light glowing-footer-menu-legal">Legal</h3>
                 <ul class="list list-simple-mini">
                     <li>
-                        <a class="fw-semibold" href="javascript:void(0)">
+                        <a class="fw-semibold" href="/privacy-policy">
                             Privacy Policy
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold" href="javascript:void(0)">
+                        <a class="fw-semibold" href="/terms-and-conditions">
                             Terms and Conditions
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold" href="javascript:void(0)">
-                            Website Contract Terms and Conditions
+                        <a class="fw-semibold" href="/website-service-contract">
+                            Website Service Contract
                         </a>
                     </li>
                     <li>
