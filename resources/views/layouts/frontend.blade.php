@@ -108,7 +108,7 @@
 
       'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
   -->
-    <div id="page-container">
+    <div id="page-container" class="dark-mode">
         <header>
             @include('sections.frontendheader')
         </header>

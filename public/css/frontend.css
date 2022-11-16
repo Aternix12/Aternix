@@ -352,7 +352,7 @@ h5 {
 }
 
 a:hover {
-    color: darkgray;
+    color: darkgray !important;
 }
 
 .content-span {
@@ -369,4 +369,16 @@ a:hover {
 .vertical-center-col {
     display: flex;
     align-items: center;
+}
+
+a {
+    color: #f1f1f1 !important;
+}
+
+a.fw-semibold.text-dark {
+    color: gray !important;
+}
+
+a.fw-semibold.text-dark:hover {
+    color: rgb(80, 80, 80) !important;
 }
