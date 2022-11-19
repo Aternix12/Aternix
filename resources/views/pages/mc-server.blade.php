@@ -41,7 +41,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <iframe src="http://221.121.158.43:6284/" title="Thicc Craft Dynmap"></iframe>
+                <iframe src="https://221.121.158.43:6284/" title="Thicc Craft Dynmap"></iframe>
             </div>
         </div>
         <hr style="color: white;">
