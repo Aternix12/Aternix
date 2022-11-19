@@ -46,3 +46,4 @@ Route::view('/game-studio/carbonfield','pages/gamestudio/carbonfield');
 
 //For Thicc Server
 Route::view('/map', 'map');
+Route::view('/thicccraftdynmap', 'pages/thicccraftdynmap');

