@@ -382,3 +382,7 @@ a.fw-semibold.text-dark {
 a.fw-semibold.text-dark:hover {
     color: rgb(80, 80, 80) !important;
 }
+iframe {
+    width: inherit;
+    height: 640px;
+}
