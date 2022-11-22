@@ -77,6 +77,18 @@ p {
     color: #f1f1f1;
 }
 
+h1 {
+    font-family: "Iceland";
+    color: #f1f1f1;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: "Iceland";
+    color: #f1f1f1;
+    font-size: 2em !important;
+}
+
 h3 {
     font-family: "Iceland";
     color: #f1f1f1;
@@ -382,12 +394,45 @@ a.fw-semibold.text-dark {
 a.fw-semibold.text-dark:hover {
     color: rgb(80, 80, 80) !important;
 }
+
 iframe {
     width: inherit;
     height: 640px;
 }
-#server-icon{
+
+#server-icon {
     float: left;
     clear: both;
     margin-right: 2%;
+}
+
+.website-clients {
+    background-position: top;
+    background-size: cover;
+    padding: 0;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 1.75rem);
+    opacity: 0;
+}
+
+.hover-container a{
+    transition: all linear 0.3s;
+}
+
+.hover-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-container:hover a {
+    opacity: 0;
+}
+
+.hover-container:hover a.hover-image {
+    opacity: 1;
 }
