@@ -386,3 +386,8 @@ iframe {
     width: inherit;
     height: 640px;
 }
+#server-icon{
+    float: left;
+    clear: both;
+    margin-right: 2%;
+}
