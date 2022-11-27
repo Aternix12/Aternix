@@ -10,6 +10,7 @@
     <meta name="description" content="Aternix - Terraforming Software, Website and Game Development Solutions">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />-->
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -42,6 +43,7 @@
     </script>
 
     <script src="https://kit.fontawesome.com/0f502d9654.js" crossorigin="anonymous"></script>
+    
 
 </head>
 

@@ -116,7 +116,7 @@
                 </ul>
                 <ul class="list list-simple-mini" id="footer-socials">
                     <li>
-                        <a class="fw-semibold" href="javascript:void(0)">
+                        <a class="fw-semibold" href="https://www.linkedin.com/company/aternix">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </li>
