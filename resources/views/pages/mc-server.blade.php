@@ -40,14 +40,14 @@
                             suit your magic, exploration and technology tree needs, without the overhead of packs like ATM8.
                             Start simple or take on an additional 4 dimensions with renowned mods like Create, Ars Nouveau,
                             Immersive Engineering, Occultism, All the Biomes and many, many more. </p>
-                            
+
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <iframe src="http://123.3.84.55:6284/" title="Thicc Craft Dynmap"></iframe>
+                <iframe src="https://dynmap.aternix.com/" title="Thicc Craft Dynmap"></iframe>
             </div>
         </div>
         <hr style="color: white;">
