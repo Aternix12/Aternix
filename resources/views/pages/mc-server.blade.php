@@ -47,11 +47,6 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <iframe src="https://dynmap.aternix.com/" title="Thicc Craft Dynmap"></iframe>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
                 <iframe src="https://bluemap.aternix.com/" title="Thicc Craft Bluemap"></iframe>
             </div>
         </div>
