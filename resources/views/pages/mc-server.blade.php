@@ -50,6 +50,11 @@
                 <iframe src="https://dynmap.aternix.com/" title="Thicc Craft Dynmap"></iframe>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <iframe src="https://bluemap.aternix.com/" title="Thicc Craft Bluemap"></iframe>
+            </div>
+        </div>
         <hr style="color: white;">
         <div class="row">
             <div class="col-md-6 vertical-center-col">
@@ -71,7 +76,7 @@
                             <button class="nav-link" id="btabs-static-profile-tab" data-bs-toggle="tab"
                                 data-bs-target="#btabs-static-profile" role="tab" aria-controls="btabs-static-profile"
                                 aria-selected="false" tabindex="-1">
-                                <h3 class="block-title">Join for Bedrock</h3>
+                                <h3 class="block-title">Ayo</h3>
                             </button>
                         </li>
                     </ul>
