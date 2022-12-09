@@ -170,7 +170,7 @@ function parseStyle(string) {
         final = document.createDocumentFragment(),
         len = codes.length,
         string = string.replace(/\n|\\n/g, '<br>');
-    
+
     for(var i = 0; i < len; i++) {
         indexes.push( string.indexOf(codes[i]) );
         string = string.replace(codes[i], '\x00\x00');
@@ -217,7 +217,7 @@ function cutString(str, cutStart, cutEnd){
 }
 
 
-function initServerData(serverIp,serverPort){ 
+function initServerData(serverIp,serverPort){
     fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
     .then(response => response.json())
     .then(data => handleServerStatus(data));
@@ -250,3 +250,4 @@ function handleServerStatus(data){
     const name = document.getElementById("server-version");
     name.innerHTML = data.server.name;
 }
+

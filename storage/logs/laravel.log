@@ -16746,3 +16746,213 @@ Stack trace:
 #48 D:\\Websites\\Aternix\\server.php(21): require_once('...')
 #49 {main}
 "} 
+[2022-12-06 13:57:08] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 13:57:12] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:08:09] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:08:15] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:09:43] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:11:06] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:11:31] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:11:58] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:12:10] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:25:28] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:30:09] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:31:56] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:34:41] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:52:29] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-06 14:53:59] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 05:32:49] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 09:48:45] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 09:49:09] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 09:50:36] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 09:50:48] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-12-07 09:51:58] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 D:\\Websites\\Aternix\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 D:\\Websites\\Aternix\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 D:\\Websites\\Aternix\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 

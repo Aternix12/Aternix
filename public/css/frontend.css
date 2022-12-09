@@ -144,6 +144,7 @@ canvas {
     background-clip: text;
     -webkit-background-clip: text;
     filter: drop-shadow(2px 2px black);
+    display: inline;
 }
 
 #logoanchor {
@@ -419,7 +420,7 @@ iframe {
     opacity: 0;
 }
 
-.hover-container a{
+.hover-container a {
     transition: all linear 0.3s;
 }
 
@@ -435,4 +436,328 @@ iframe {
 
 .hover-container:hover a.hover-image {
     opacity: 1;
+}
+
+.glitchbox {
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    position: relative;
+}
+
+.glitchbox .aternixtext {
+    position: absolute;
+    padding: 30px;
+    font-family: Aternix;
+    letter-spacing: 8px;
+    font-size: 20px !important;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px darkred;
+    color: #f1f1f1;
+    background: -webkit-linear-gradient(#000, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline;
+    font-weight: 400;
+    filter: drop-shadow(1px 1px black);
+    margin-top: -30px;
+    margin-left: -30px;
+    height: inherit;
+    top: -15%;
+}
+
+.glitchbox .aternixtext:hover:before,
+.glitchbox .aternixtext:hover:after {
+    padding: 30px;
+    color: white;
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0E0E10;
+    overflow: hidden;
+    top: 0;
+    display: inline;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(51, 51, 51, 0));
+    filter: drop-shadow(1px 1px black);
+}
+
+.glitchbox .aternixtext:before {
+    left: 3px;
+    text-shadow: -2px 0 rgb(0, 0, 255);
+    animation: glitch-1 2s linear infinite reverse;
+}
+
+.glitchbox .aternixtext:after {
+    left: -3px;
+    text-shadow: -2px 0 rgb(255, 0, 0);
+    animation: glitch-2 2s linear infinite reverse;
+}
+
+@keyframes glitch-1 {
+    0% {
+        clip: rect(132px, auto, 101px, 30px);
+    }
+
+    5% {
+        clip: rect(17px, auto, 94px, 30px);
+    }
+
+    10% {
+        clip: rect(40px, auto, 66px, 30px);
+    }
+
+    15% {
+        clip: rect(87px, auto, 82px, 30px);
+    }
+
+    20% {
+        clip: rect(137px, auto, 61px, 30px);
+    }
+
+    25% {
+        clip: rect(34px, auto, 14px, 30px);
+    }
+
+    30% {
+        clip: rect(133px, auto, 74px, 30px);
+    }
+
+    35% {
+        clip: rect(76px, auto, 107px, 30px);
+    }
+
+    40% {
+        clip: rect(59px, auto, 130px, 30px);
+    }
+
+    45% {
+        clip: rect(29px, auto, 84px, 30px);
+    }
+
+    50% {
+        clip: rect(22px, auto, 67px, 30px);
+    }
+
+    55% {
+        clip: rect(67px, auto, 62px, 30px);
+    }
+
+    60% {
+        clip: rect(10px, auto, 105px, 30px);
+    }
+
+    65% {
+        clip: rect(78px, auto, 115px, 30px);
+    }
+
+    70% {
+        clip: rect(105px, auto, 13px, 30px);
+    }
+
+    75% {
+        clip: rect(15px, auto, 75px, 30px);
+    }
+
+    80% {
+        clip: rect(66px, auto, 39px, 30px);
+    }
+
+    85% {
+        clip: rect(133px, auto, 73px, 30px);
+    }
+
+    90% {
+        clip: rect(36px, auto, 128px, 30px);
+    }
+
+    95% {
+        clip: rect(68px, auto, 103px, 30px);
+    }
+
+    100% {
+        clip: rect(14px, auto, 100px, 30px);
+    }
+}
+
+@keyframes glitch-2 {
+    0% {
+        clip: rect(129px, auto, 36px, 30px);
+    }
+
+    5% {
+        clip: rect(36px, auto, 4px, 30px);
+    }
+
+    10% {
+        clip: rect(85px, auto, 66px, 30px);
+    }
+
+    15% {
+        clip: rect(91px, auto, 91px, 30px);
+    }
+
+    20% {
+        clip: rect(148px, auto, 138px, 30px);
+    }
+
+    25% {
+        clip: rect(38px, auto, 122px, 30px);
+    }
+
+    30% {
+        clip: rect(69px, auto, 54px, 30px);
+    }
+
+    35% {
+        clip: rect(98px, auto, 71px, 30px);
+    }
+
+    40% {
+        clip: rect(146px, auto, 34px, 30px);
+    }
+
+    45% {
+        clip: rect(134px, auto, 43px, 30px);
+    }
+
+    50% {
+        clip: rect(102px, auto, 80px, 30px);
+    }
+
+    55% {
+        clip: rect(119px, auto, 44px, 30px);
+    }
+
+    60% {
+        clip: rect(106px, auto, 99px, 30px);
+    }
+
+    65% {
+        clip: rect(141px, auto, 74px, 30px);
+    }
+
+    70% {
+        clip: rect(20px, auto, 78px, 30px);
+    }
+
+    75% {
+        clip: rect(133px, auto, 79px, 30px);
+    }
+
+    80% {
+        clip: rect(78px, auto, 52px, 30px);
+    }
+
+    85% {
+        clip: rect(35px, auto, 39px, 30px);
+    }
+
+    90% {
+        clip: rect(67px, auto, 70px, 30px);
+    }
+
+    95% {
+        clip: rect(71px, auto, 103px, 30px);
+    }
+
+    100% {
+        clip: rect(83px, auto, 40px, 30px);
+    }
+}
+
+.wavyglitch {
+    position: relative;
+    z-index: 10;
+}
+
+.wavyglitch:before,
+.wavyglitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wavyglitch:after {
+    color: #f0f;
+    z-index: -1;
+}
+
+.wavyglitch:before {
+    color: #0ff;
+    z-index: -2;
+}
+.main-menu-link:hover > .wavyglitch:before{
+    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+.main-menu-link:hover > .wavyglitch:after {
+    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+@media only screen and (max-width: 400px) {
+    .wavyglitch {
+        font-size: 3em;
+    }
+}
+
+@-webkit-keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(-1px, -1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(-1px, -1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+
+    to {
+        transform: translate(0);
+    }
 }

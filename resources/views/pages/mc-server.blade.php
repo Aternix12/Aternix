@@ -35,6 +35,9 @@
                         <h5>Players:
                             <span class="fw-semibold text-muted content-span" id="player-count">?</span>
                         </h5>
+                        <h5>Seed:
+                            <span class="fw-semibold text-muted content-span">7533738206158821955</span>
+                        </h5>
                         <p>ThiccCraft brings the best of both magic and technology under a robust but modest playset of the
                             most recent mods. Here you will find an experience that we and our team (my friends) find to
                             suit your magic, exploration and technology tree needs, without the overhead of packs like ATM8.
@@ -47,7 +50,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <iframe src="https://bluemap.aternix.com/" title="Thicc Craft Bluemap"></iframe>
+                <iframe src="https://bluemap.aternix.com/" title="Bluemap" id="bluemapframe"></iframe>
             </div>
         </div>
         <hr style="color: white;">
