@@ -219,15 +219,16 @@ small {
     aspect-ratio: unset !important;
     width: 100% !important;
     height: 200px !important;
-    z-index: 50;
     filter: brightness(25%);
     margin-top: -5%;
-
+    width: 100%;
+    position: relative;
 }
 
 .video-container {
     background-image: linear-gradient(to bottom, black, #0E0E10);
     margin-top: -5%;
+    position: relative;
 }
 
 .hidden {
@@ -314,7 +315,7 @@ footer {
 }
 
 svg.svg-inline--fa.fa-steam {
-    color: #324b6c;
+    color: #2a475e;
 }
 
 svg.svg-inline--fa.fa-itch-io {
@@ -669,13 +670,16 @@ iframe {
     }
 }
 
-.wavyglitch {
+.wavyglitch,
+.footerwavyglitch {
     position: relative;
     z-index: 10;
 }
 
 .wavyglitch:before,
-.wavyglitch:after {
+.wavyglitch:after,
+.footerwavyglitch:before,
+.footerwavyglitch:after {
     display: block;
     content: attr(data-glitch);
     position: absolute;
@@ -685,29 +689,36 @@ iframe {
     height: 100%;
 }
 
-.wavyglitch:after {
+.footerwavyglitch:hover {
+    color: white !important;
+}
+
+.wavyglitch:after,
+.footerwavyglitch:after {
     color: #f0f;
     z-index: -1;
+    opacity: 0;
 }
 
-.wavyglitch:before {
+.wavyglitch:before,
+.footerwavyglitch:before {
     color: #0ff;
     z-index: -2;
+    opacity: 0;
 }
-.main-menu-link:hover > .wavyglitch:before{
+
+.main-menu-link:hover>.wavyglitch:before,
+.footerwavyglitch:hover:before {
     -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
     animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    opacity: 1;
 }
 
-.main-menu-link:hover > .wavyglitch:after {
+.main-menu-link:hover>.wavyglitch:after,
+.footerwavyglitch:hover:after {
     -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
     animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-}
-
-@media only screen and (max-width: 400px) {
-    .wavyglitch {
-        font-size: 3em;
-    }
+    opacity: 1;
 }
 
 @-webkit-keyframes glitch {
@@ -759,5 +770,134 @@ iframe {
 
     to {
         transform: translate(0);
+    }
+}
+
+#smoke-socials {
+    font-size: 35px !important;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    top: -25%;
+}
+
+#smoke-socials>li {
+    display: inline;
+}
+
+#smoke-overlay {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+#smoke-socials>li>a {
+    position: relative !important;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    min-height: 45px !important;
+}
+
+#smoke-socials>li {
+    position: relative;
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+#smoke-socials>li>a>svg {
+    margin: 0 !important;
+    vertical-align: middle;
+}
+
+#smoke-socials>li>a>iconify-icon {
+    margin: 0 !important;
+    vertical-align: inherit;
+}
+
+#smoke-socials li:hover a {
+    font-size: 45px;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    z-index: 1 !important;
+    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+.no-shadow{
+    position: absolute !important;
+}
+
+.smoke-shadow{
+    pointer-events: none;
+}
+
+.smoke-shadow >  a > svg {
+    border-radius: 50%;
+    width: 1px;
+    height: 1px;
+    color: transparent !important;
+    vertical-align: middle;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.smoke-shadow >  a > iconify-icon {
+    border-radius: 50%;
+    width: 1px;
+    height: 1px;
+    color: transparent !important;
+    vertical-align: middle !important;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+
+#smoke-socials li:hover + li > a > svg {
+    box-shadow:  0 0 45px 25px var(--clr);
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+
+}
+
+#smoke-socials li:hover + li > a > iconify-icon {
+    box-shadow:  0 0 45px 25px var(--clr);
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    animation-delay: -1s;
+    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+}
+
+#smoke-overlay-container {
+    pointer-events: none;
+}
+
+li {
+    vertical-align: middle;
+}
+
+@keyframes wavy {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 120%;
+    }
+
+    to {
+        scale: 100%;
     }
 }

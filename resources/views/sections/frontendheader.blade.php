@@ -1,5 +1,5 @@
 <div class="row header-row">
-    <div class="col-md-2 frontend-header">
+    <div class="col-md-2 col-sm-12 frontend-header">
         <a class="main-menu-link" id="logoanchor" href="/" target="_self" data-menu-group="prints">
 
             <span id="logospan"><img id="aternixlogoheader" src="/media/photos/Logo_base.png" width="38"
@@ -12,7 +12,7 @@
             </span>
         </a>
     </div>
-    <div class="col-md-8 frontend-header" id="frontend-header-div">
+    <div class="col-md-8 col-sm-12 frontend-header" id="frontend-header-div">
         <ul id="frontend-header-list">
             <li class="main-menu-item">
                 <a class="main-menu-link" href="/about" target="_self" data-menu-group="prints">
@@ -78,5 +78,5 @@
         </ul>
     </div>
 
-    <div class="col-md-2 frontend-header"></div>
+    <div class="col-md-2 col-sm-12 frontend-header"></div>
 </div>
