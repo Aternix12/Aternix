@@ -1,41 +1,52 @@
 @extends('layouts.frontend') @section('content')
     <!-- Hero -->
+    <div class="bg-image" style="background-image: url('/media/photos/about_hero.jpg'); background-position: 0% 70%;">
+        <div class="bg-black-50">
+            <div class="content content-top content-full text-center">
+                <div class="artist-info">
+                    <div class="avatar">
+                        <img id="about-profile-img" alt="Tristan Mitchell" src="/media/photos/Square Closeup.jpg" height="120"
+                            width="120" />
+                    </div>
 
-    <div class="hero" id="about-hero">
-        <div id="about-hero-image">
+                    <div class="artist-info-texts">
+                        <h1 class="artist-name artist-text">
+                            Tristan Mitchell
+                        </h1>
+                        <h3 class="artist-text">
+                            Founder
+                        </h3>
+                        <div>
+                            admin@aternix.com
+                        </div>
 
-        </div>
-        <div class="artist-info">
-            <div class="avatar">
-                <img id="about-profile-img" alt="Tristan Mitchell" src="/media/photos/Square Closeup.jpg" height="120"
-                    width="120" />
-            </div>
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span ng-bind-html="user.location">Melbourne, Australia</span>
+                        </div>
 
-            <div class="artist-info-texts">
-                <h1 class="artist-name artist-text">
-                    Tristan Mitchell
-                </h1>
-                <h3 class="artist-text">
-                    Founder
-                </h3>
-                <div>
-                    admin@aternix.com
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span ng-bind-html="user.location">Melbourne, Australia</span>
-                </div>
-
-                <div class="about-icons">
-                    <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
-                        <i class="fa-brands fa-linkedin about-icons"></i>
-                    </a>
+                        <div class="about-icons">
+                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
+                                <i class="fa-brands fa-linkedin about-icons"></i>
+                            </a>
+                            <a href="https://github.com/Aternix12" target="_blank" class="about-icons">
+                                <i class="fa-brands fa-github about-icons"></i>
+                            </a>
+                            <a href="https://soundcloud.com/aternix12" target="_blank" class="about-icons">
+                                <i class="fa-brands fa-soundcloud about-icons"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
+                                <i class="fa-brands fa-linkedin about-icons"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
+                                <i class="fa-brands fa-linkedin about-icons"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- END Hero -->
 
     <!-- Main -->

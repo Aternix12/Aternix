@@ -1,5 +1,5 @@
 @extends('layouts.frontend') @section('content')
-    <div class="bg-image" style="background-image: url('assets/media/photos/photo21@2x.jpg');">
+    <div class="bg-image" style="background-image: url('/media/photos/press_hero.jpg');">
         <div class="bg-black-50">
             <div class="content content-top content-full text-center">
                 <h1 class="fw-bold text-white mt-5 mb-2">
