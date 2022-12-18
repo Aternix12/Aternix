@@ -77,6 +77,10 @@ p {
     color: #f1f1f1;
 }
 
+div {
+    font-family: "Electrolize";
+}
+
 h1 {
     font-family: "Iceland";
     color: #f1f1f1;
@@ -109,7 +113,7 @@ ul {
     background-color: #171717;
 }
 
-svg {
+.main-menu-link>svg {
     margin-right: 0.5em;
     color: red;
 }
@@ -196,6 +200,10 @@ canvas {
 
 .about-icons {
     height: 32px;
+}
+
+.about-icons>a>svg {
+    color: var(--clr);
 }
 
 .block {
@@ -831,15 +839,16 @@ iframe {
     z-index: 1 !important;
     animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
-.no-shadow{
+
+.no-shadow {
     position: absolute !important;
 }
 
-.smoke-shadow{
+.smoke-shadow {
     pointer-events: none;
 }
 
-.smoke-shadow >  a > svg {
+.smoke-shadow>a>svg {
     border-radius: 50%;
     width: 1px;
     height: 1px;
@@ -850,7 +859,7 @@ iframe {
     transition-timing-function: ease-in-out;
 }
 
-.smoke-shadow >  a > iconify-icon {
+.smoke-shadow>a>iconify-icon {
     border-radius: 50%;
     width: 1px;
     height: 1px;
@@ -862,8 +871,8 @@ iframe {
 }
 
 
-#smoke-socials li:hover + li > a > svg {
-    box-shadow:  0 0 45px 25px var(--clr);
+#smoke-socials li:hover+li>a>svg {
+    box-shadow: 0 0 45px 25px var(--clr);
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
@@ -871,8 +880,8 @@ iframe {
 
 }
 
-#smoke-socials li:hover + li > a > iconify-icon {
-    box-shadow:  0 0 45px 25px var(--clr);
+#smoke-socials li:hover+li>a>iconify-icon {
+    box-shadow: 0 0 45px 25px var(--clr);
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
@@ -900,4 +909,78 @@ li {
     to {
         scale: 100%;
     }
+}
+
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgba(20, 20, 20);
+}
+
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 916px;
+    width: calc(100% - 20px);
+    margin: auto !important;
+}
+
+#cards:hover>.card::after {
+    opacity: 1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card::before,
+.card::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+.card::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(136, 0, 0, 0.144),
+            transparent 40%);
+    z-index: 3;
+}
+
+.card::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(128, 0, 106, 0.5),
+            transparent 40%);
+    z-index: 1;
+}
+
+.card>.card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
 }

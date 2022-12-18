@@ -28,17 +28,17 @@
                     <i class="fa-brands fa-steam"></i>
                 </a>
             </li>
-            <li style="--clr: #ff5c5b" class="no-shadow">
+            <li style="--clr: #ff5c5b;" class="no-shadow">
                 <a class="fw-semibold" href="javascript:void(0)">
                     <i class="fa-brands fa-itch-io"></i>
                 </a>
             </li>
-            <li style="--clr: #ff5c5b" class="smoke-shadow">
+            <li style="--clr: #ff5c5b;" class="smoke-shadow">
                 <a class="fw-semibold" href="javascript:void(0)">
                     <i class="fa-brands fa-itch-io"></i>
                 </a>
             </li>
-            <li style="--clr: #7289da" class="no-shadow">
+            <li style="--clr: #7289da;" class="no-shadow">
                 <a class="fw-semibold" href="javascript:void(0)">
                     <i class="fa-brands fa-discord"></i>
                 </a>
@@ -48,32 +48,32 @@
                     <i class="fa-brands fa-discord"></i>
                 </a>
             </li>
-            <li style="--clr: #0a66c2" class="no-shadow">
+            <li style="--clr: #0a66c2;" class="no-shadow">
                 <a class="fw-semibold" href="https://www.linkedin.com/company/aternix">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </li>
-            <li style="--clr: #0a66c2" class="smoke-shadow">
+            <li style="--clr: #0a66c2;" class="smoke-shadow">
                 <a class="fw-semibold" href="https://www.linkedin.com/company/aternix">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </li>
-            <li style="--clr: #ef1c6e" class="no-shadow">
+            <li style="--clr: #ef1c6e;" class="no-shadow">
                 <a class="fw-semibold svg-inline--fa" href="javascript:void(0)">
                     <iconify-icon icon="simple-icons:odysee"></iconify-icon>
                 </a>
             </li>
-            <li style="--clr: #ef1c6e" class="smoke-shadow">
+            <li style="--clr: #ef1c6e;" class="smoke-shadow">
                 <a class="fw-semibold svg-inline--fa" href="javascript:void(0)">
                     <iconify-icon icon="simple-icons:odysee"></iconify-icon>
                 </a>
             </li>
-            <li style="--clr: #E1306C" class="no-shadow">
+            <li style="--clr: #E1306C;" class="no-shadow">
                 <a class="fw-semibold" href="javascript:void(0)">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </li>
-            <li style="--clr: #E1306C" class="smoke-shadow">
+            <li style="--clr: #E1306C;" class="smoke-shadow">
                 <a class="fw-semibold" href="javascript:void(0)">
                     <i class="fa-brands fa-instagram"></i>
                 </a>

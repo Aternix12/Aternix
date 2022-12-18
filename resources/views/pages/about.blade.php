@@ -26,20 +26,16 @@
                         </div>
 
                         <div class="about-icons">
-                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
+                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank"
+                                class="about-icons" style="--clr: #0a66c2;">
                                 <i class="fa-brands fa-linkedin about-icons"></i>
                             </a>
-                            <a href="https://github.com/Aternix12" target="_blank" class="about-icons">
+                            <a href="https://github.com/Aternix12" target="_blank" class="about-icons" style="--clr: #6e5494;">
                                 <i class="fa-brands fa-github about-icons"></i>
                             </a>
-                            <a href="https://soundcloud.com/aternix12" target="_blank" class="about-icons">
+                            <a href="https://soundcloud.com/aternix12" target="_blank" class="about-icons" style="--clr: #ff7700;">
                                 <i class="fa-brands fa-soundcloud about-icons"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
-                                <i class="fa-brands fa-linkedin about-icons"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/tristan-mitchell-8024b3150/" target="_blank" class="about-icons">
-                                <i class="fa-brands fa-linkedin about-icons"></i>
                             </a>
                         </div>
                     </div>
@@ -52,344 +48,132 @@
     <!-- Main -->
 
     <div id="main" class="content">
-        <div class="row items-push">
-            <div class="col-md-6 hidden">
-                <div class="block block-rounded block-fx-shadow dark-mode">
-                    <div class="block-header block-header-default dark-mode">
-                        <h3 class="block-title">Vision</h3>
-                    </div>
-                    <div class="block-content dark-mode">
-                        <h5>Our aim is to re-imagine the digital experience.</h5>
-                        <p>
-                            We are a creative workspace focused on slowly pushing the assumed relation between user and
-                            technology, by ensuring our products produce a meaningful bond with its users.
-                            <br><br>
-                            Founded in 2014, we serve a passionate undertaking both in the professional and creative
-                            workspaces.
-                            Our specialisms lie in User-Portal Focused Software Solutions, Website Production and Game
-                            Development.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 hidden">
-                <div class="block block-rounded block-fx-shadow dark-mode">
-                    <div class="block-header block-header-default dark-mode">
-                        <h3 class="block-title">Inception</h3>
-                    </div>
-                    <div class="block-content dark-mode">
-                        <p>
-                            Gday
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2 class="content-heading">Inception</h2>
+        <h5>Our aim is to re-imagine the digital experience.</h5>
+        <p>
+            We are a creative workspace focused on slowly pushing the assumed relation between user and
+            technology, by ensuring our products produce a meaningful bond with its users.
+            <br><br>
+            Founded in 2014, we serve a passionate undertaking both in the professional and creative
+            workspaces.
+            Our specialisms lie in User-Portal Focused Software Solutions, Website Production and Game
+            Development.
+            <br><br>
+            Aternix was also conceptualised as a publishing bedrock for self-developed launch titles, alongside website and
+            software services.
+            Through enthusiastic commitment over the coming years, we hope to see these creative titles by Aternix and
+            outside developers alike find successful launches in our portfolio.
+        </p>
+        <h2 class="content-heading">About Me</h2>
+        <p>
+            I'm Tristan, but 'Twisty' has stuck my whole life. I was born and raised in rural Victoria and
+            am 24y/o. I first started developing games at 10, and even then knew my adult life would be
+            focused on producing experiences somewhere in the world of IT. I am currently knuckling down
+            completing a BA CompSci at Swinburne Uni, Melbourne as of 2023. :)
+            <br><br>
+            I will be continuing my time on Aternix during and after Uni to see through titles currently in
+            development.
+        </p>
 
         <ul class="timeline timeline-centered timeline-alt">
             <li class="timeline-event">
-                <div class="timeline-event-icon bg-default">
-                    <i class="fab fa-facebook-f"></i>
+                <div class="timeline-event-icon bg-gd-sea">
+                    <i class="fa-solid fa-globe"></i>
                 </div>
-                <div class="timeline-event-block block block-rounded">
+                <div class="timeline-event-block block block-rounded block-fx-shadow">
                     <div class="block-header block-header-default">
-                        <h3 class="block-title">New Friends</h3>
+                        <h3 class="block-title">Website Launch</h3>
                         <div class="block-options">
                             <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                just now
+                                2022
                             </div>
                         </div>
                     </div>
-                    <div class="block-content">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="nav-items push">
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar1.jpg"
-                                                    alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Sara Fields</div>
-                                                <div class="fs-sm text-muted">3 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar12.jpg"
-                                                    alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Ralph Murray</div>
-                                                <div class="fw-normal fs-sm text-muted">5 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar3.jpg"
-                                                    alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-danger"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Amber Harvey</div>
-                                                <div class="fw-normal fs-sm text-muted">16 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="nav-items push">
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar5.jpg"
-                                                    alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Marie Duncan</div>
-                                                <div class="fs-sm text-muted">23 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar11.jpg"
-                                                    alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Brian Cruz</div>
-                                                <div class="fw-normal fs-sm text-muted">23 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="d-flex py-2" href="javascript:void(0)">
-                                            <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-left">
-                                                <img class="img-avatar img-avatar48"
-                                                    src="assets/media/avatars/avatar7.jpg" alt="">
-                                                <span
-                                                    class="overlay-item item item-tiny item-circle border border-2 border-white bg-danger"></span>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="fw-semibold">Lori Moore</div>
-                                                <div class="fw-normal fs-sm text-muted">35 min ago</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="block-content dark-mode">
+                        <p>Aternix's new website was developed and launched in 2022/2023 as a central hub for all areas of
+                            service and creation. The site maintains news and updates regarding games aswell as a public
+                            forum.</p>
                     </div>
                 </div>
             </li>
             <li class="timeline-event">
-                <div class="timeline-event-icon bg-info">
-                    <i class="fab fa-twitter"></i>
+                <div class="timeline-event-icon bg-gd-fruit">
+                    <i class="fa-brands fa-space-awesome"></i>
                 </div>
-                <div class="timeline-event-block block block-rounded">
+                <div class="timeline-event-block block block-rounded block-fx-shadow">
                     <div class="block-header block-header-default">
-                        <h3 class="block-title">Update</h3>
+                        <h3 class="block-title">War in Space</h3>
                         <div class="block-options">
                             <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                30 min ago
+                                2018
                             </div>
                         </div>
                     </div>
-                    <div class="block-content">
-                        <div class="d-flex fs-sm">
+                    <div class="block-content dark-mode">
+                        <div class="d-flex">
                             <a class="flex-shrink-0 img-link me-2" href="javascript:void(0)">
                                 <img class="img-avatar img-avatar48 img-avatar-thumb"
-                                    src="assets/media/avatars/avatar4.jpg" alt="" title="" style="">
+                                    src="/media/photos/wis-arcade-icon.png" alt="" title="" style="">
                             </a>
-                            <div class="flex-grow-1">
-                                <p>
-                                    <a class="fw-semibold" href="javascript:void(0)">Amber Harvey</a>
-                                    Vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
-                                    vulputate fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                                    tincidunt sollicitudin sem nec ultrices. Sed at mi velit.
-                                </p>
-                                <p>
-                                    <a class="text-dark me-2" href="javascript:void(0)">
-                                        <i class="fa fa-reply fa-fw text-muted"></i> Reply
-                                    </a>
-                                    <a class="text-dark me-2" href="javascript:void(0)">
-                                        <i class="fa fa-redo fa-fw text-muted"></i> Retweet
-                                    </a>
-                                    <a class="text-dark me-2" href="javascript:void(0)">
-                                        <i class="fa fa-heart fa-fw text-muted"></i> Like
-                                    </a>
-                                </p>
-                            </div>
+                            <p>Originally based off earlier games, War in Space Arcade was Aternix's first main-line launch
+                                titled to be published. This wave based arcade shooter contains 81 challenging levels with a
+                                robust focus tree. My inspiration for the War in Space series was Galaga and Chicken
+                                Invaders, where continuous perks are dropped and witty commentary deliniates stages.</p>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="timeline-event">
-                <div class="timeline-event-icon bg-success">
-                    <i class="fa fa-images"></i>
+                <div class="timeline-event-icon bg-gd-sun">
+                    <i class="fa-solid fa-cube"></i>
                 </div>
-                <div class="timeline-event-block block block-rounded">
+                <div class="timeline-event-block block block-rounded block-fx-shadow">
                     <div class="block-header block-header-default">
-                        <h3 class="block-title">New Gallery</h3>
+                        <h3 class="block-title">Foundation</h3>
                         <div class="block-options">
                             <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                2 hrs ago
+                                2014
                             </div>
                         </div>
                     </div>
-                    <div class="block-content">
-                        <div class="row items-push js-gallery img-fluid-100 js-gallery-enabled">
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo11@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo11.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo12@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo12.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo13@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo13.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo14@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo14.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo15@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo15.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo16@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo16.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo17@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo17.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-lg-4 col-xl-3">
-                                <a class="img-link img-link-simple img-link-zoom-in img-lightbox"
-                                    href="assets/media/photos/photo18@2x.jpg">
-                                    <img class="img-fluid" src="assets/media/photos/photo18.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="timeline-event">
-                <div class="timeline-event-icon bg-danger">
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <div class="timeline-event-block block block-rounded">
-                    <div class="block-header block-header-default">
-                        <h3 class="block-title">Meeting</h3>
-                        <div class="block-options">
-                            <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                3 hrs ago
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-content">
-                        <div class="d-flex fs-sm push">
+                    <div class="block-content dark-mode">
+                        <div class="d-flex">
                             <a class="flex-shrink-0 img-link me-2" href="javascript:void(0)">
-                                <i class="fa fa-utensils fa-fw fa-3x text-danger-light"></i>
+                                <img class="img-avatar img-avatar48 img-avatar-thumb"
+                                    src="/media/photos/old_company_logo.png" alt="" title="" style="">
                             </a>
-                            <div class="flex-grow-1">
-                                <p>
-                                    You have a meal meeting scheduled with <a class="fw-semibold"
-                                        href="javascript:void(0)">Thomas Riley</a> today at 16:18.
-                                </p>
-                            </div>
+                            <p>Aternix was a initially a teenage project of mine to publish my games online and give myself
+                                a game-developer identity. During the brief life of the first website, I ran a personal
+                                forum, and had download links for dozens of smaller games I made over the years.</p>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="timeline-event">
-                <div class="timeline-event-icon bg-xsmooth">
-                    <i class="far fa-file-alt"></i>
+                <div class="timeline-event-icon bg-gd-sublime">
+                    <i class="fa-solid fa-dice-d20"></i>
                 </div>
-                <div class="timeline-event-block block block-rounded">
+                <div class="timeline-event-block block block-rounded block-fx-shadow">
                     <div class="block-header block-header-default">
-                        <h3 class="block-title">Post</h3>
+                        <h3 class="block-title">Original Games</h3>
                         <div class="block-options">
                             <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                6 hrs ago
+                                2008 - 2014
                             </div>
                         </div>
                     </div>
-                    <div class="block-content">
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing
-                            luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor
-                            tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum
-                            quis in sit varius lorem sit metus mi.</p>
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing
-                            luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor
-                            tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum
-                            quis in sit varius lorem sit metus mi.</p>
-                        <a class="btn btn-sm btn-alt-secondary push" href="javascript:void(0)">Read More..</a>
-                    </div>
-                </div>
-            </li>
-            <li class="timeline-event">
-                <div class="timeline-event-icon bg-dark">
-                    <i class="fa fa-cogs"></i>
-                </div>
-                <div class="timeline-event-block block block-rounded">
-                    <div class="block-header block-header-default">
-                        <h3 class="block-title">System</h3>
-                        <div class="block-options">
-                            <div class="timeline-event-time block-options-item fs-sm fw-semibold">
-                                1 day ago
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-content">
-                        <div class="alert alert-success d-flex align-items-center justify-content-between" role="alert">
-                            <div class="flex-grow-1 me-3">
-                                <p class="mb-0">Core successfully <a class="alert-link"
-                                        href="javascript:void(0)">updated</a> to v3.2!</p>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <i class="fa fa-fw fa-check-circle"></i>
-                            </div>
+                    <div class="block-content dark-mode">
+                        <div class="d-flex">
+                            <a class="flex-shrink-0 img-link me-2" href="javascript:void(0)">
+                                <img class="img-avatar img-avatar48 img-avatar-thumb"
+                                    src="/media/photos/soldier.jpg" alt="" title="" style="">
+                            </a>
+                            <p>Dozens of smaller games from numerous genres such as Arcade, Shooter, Strategy and Puzzle were created over my preteen and teen years. These projects gave me the dedication to move forward into the game industry after school, and pursue my understanding of what makes a gaming experience memorable.</p>
                         </div>
                     </div>
                 </div>
             </li>
         </ul>
-
-
     </div>
 
     <!-- END Main -->

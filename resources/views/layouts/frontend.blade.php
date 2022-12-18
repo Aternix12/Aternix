@@ -24,6 +24,7 @@
     @yield('css_before')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" id="css-main" href="{{ mix('css/dashmix.css') }}">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/frontend.css">
     <link rel="stylesheet" href="css/preloader.css">
@@ -36,6 +37,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="https://kit.fontawesome.com/9229bd030a.js" crossorigin="anonymous"></script>
 
 
     <script>
@@ -43,7 +45,7 @@
     </script>
 
     <script src="https://kit.fontawesome.com/0f502d9654.js" crossorigin="anonymous"></script>
-    
+
 
 </head>
 

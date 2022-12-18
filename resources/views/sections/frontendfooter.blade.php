@@ -8,27 +8,27 @@
                 <h3 class="fw-light glowing-footer-menu-explore">Explore</h3>
                 <ul class="list list-simple-mini">
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Game Studio" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Game Studio" href="/game-studio">
                             Game Studio
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Software" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Software" href="/software">
                             Software
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Websites" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Websites" href="/websites">
                             Websites
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="MC Server" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="MC Server" href="/mc-server">
                             MC Server
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Forum" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Forum" href="/forum">
                             Forum
                         </a>
                     </li>
@@ -38,17 +38,17 @@
                 <h3 class="fw-light glowing-footer-menu-company">Company</h3>
                 <ul class="list list-simple-mini">
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="About" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="About" href="/about">
                             About
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Press Releases" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Press Releases" href="/news">
                             Press Releases
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="Enquiry" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="Enquiry" href="/enquiry">
                             Enquiry
                         </a>
                     </li>
@@ -58,12 +58,12 @@
                 <h3 class="fw-light glowing-footer-menu-projects">Projects</h3>
                 <ul class="list list-simple-mini">
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="War in Space Arcade" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="War in Space Arcade" href="/game-studio/war-in-space-arcade">
                             War in Space Arcade
                         </a>
                     </li>
                     <li>
-                        <a class="fw-semibold footerwavyglitch" data-glitch="CarbonField" href="javascript:void(0)">
+                        <a class="fw-semibold footerwavyglitch" data-glitch="CarbonField" href="/game-studio/carbonfield">
                             CarbonField
                         </a>
                     </li>
