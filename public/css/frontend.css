@@ -98,6 +98,7 @@ h3 {
     color: #f1f1f1;
     font-size: 32px;
     filter: drop-shadow(2px 2px black);
+    font-weight: 500;
 }
 
 a {
@@ -228,7 +229,7 @@ small {
     width: 100% !important;
     height: 200px !important;
     filter: brightness(25%);
-    margin-top: -5%;
+    margin-top: -120px;
     width: 100%;
     position: relative;
 }
@@ -788,7 +789,7 @@ iframe {
     width: 100%;
     display: block;
     text-align: center;
-    top: -25%;
+    top: -50px;
 }
 
 #smoke-socials>li {
