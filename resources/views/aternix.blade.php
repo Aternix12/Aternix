@@ -59,12 +59,12 @@
                 </a>
             </li>
             <li style="--clr: #ef1c6e;" class="no-shadow">
-                <a class="fw-semibold svg-inline--fa" href="javascript:void(0)">
+                <a class="fw-semibold" href="javascript:void(0)">
                     <iconify-icon icon="simple-icons:odysee"></iconify-icon>
                 </a>
             </li>
             <li style="--clr: #ef1c6e;" class="smoke-shadow">
-                <a class="fw-semibold svg-inline--fa" href="javascript:void(0)">
+                <a class="fw-semibold" href="javascript:void(0)">
                     <iconify-icon icon="simple-icons:odysee"></iconify-icon>
                 </a>
             </li>

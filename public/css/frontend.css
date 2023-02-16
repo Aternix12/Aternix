@@ -783,7 +783,6 @@ iframe {
 }
 
 #smoke-socials {
-    font-size: 35px !important;
     margin: 0;
     position: absolute;
     width: 100%;
@@ -810,7 +809,6 @@ iframe {
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
-    min-height: 45px !important;
 }
 
 #smoke-socials>li {
@@ -825,52 +823,25 @@ iframe {
 #smoke-socials>li>a>svg {
     margin: 0 !important;
     vertical-align: middle;
+    line-height: 35px !important;
+    height: 35px;
 }
 
 #smoke-socials>li>a>iconify-icon {
     margin: 0 !important;
-    vertical-align: inherit;
+    vertical-align: middle;
+    line-height: 40px !important;
+    height: 35px;
+    font-size: 35px;
 }
 
 #smoke-socials li:hover a {
-    font-size: 45px;
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
     z-index: 1 !important;
     animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
-
-.no-shadow {
-    position: absolute !important;
-}
-
-.smoke-shadow {
-    pointer-events: none;
-}
-
-.smoke-shadow>a>svg {
-    border-radius: 50%;
-    width: 1px;
-    height: 1px;
-    color: transparent !important;
-    vertical-align: middle;
-    transition-duration: 0.3s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
-
-.smoke-shadow>a>iconify-icon {
-    border-radius: 50%;
-    width: 1px;
-    height: 1px;
-    color: transparent !important;
-    vertical-align: middle !important;
-    transition-duration: 0.3s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
-
 
 #smoke-socials li:hover+li>a>svg {
     box-shadow: 0 0 45px 25px var(--clr);
@@ -886,9 +857,41 @@ iframe {
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
-    animation-delay: -1s;
     animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
 }
+
+.no-shadow {
+    position: absolute !important;
+}
+
+.smoke-shadow {
+    pointer-events: none;
+}
+
+.smoke-shadow>a>svg {
+    border-radius: 50%;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    vertical-align: middle;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.smoke-shadow>a>iconify-icon {
+    border-radius: 50%;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    vertical-align: middle !important;
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+
+
 
 #smoke-overlay-container {
     pointer-events: none;
@@ -904,7 +907,7 @@ li {
     }
 
     50% {
-        scale: 120%;
+        scale: 135%;
     }
 
     to {
