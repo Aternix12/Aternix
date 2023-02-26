@@ -1,10 +1,10 @@
 <div class="content">
     <div class="row items-push fs-sm pt-4">
         <div class="row items-push fs-sm pt-4">
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <img id="footer-logo" src="/media/photos/Logo_base.png" width="100%" />
             </div>
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <h3 class="fw-light glowing-footer-menu-explore">Explore</h3>
                 <ul class="list list-simple-mini">
                     <li>
@@ -34,7 +34,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <h3 class="fw-light glowing-footer-menu-company">Company</h3>
                 <ul class="list list-simple-mini">
                     <li>
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <h3 class="fw-light glowing-footer-menu-projects">Projects</h3>
                 <ul class="list list-simple-mini">
                     <li>
@@ -69,7 +69,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <h3 class="fw-light glowing-footer-menu-legal">Legal</h3>
                 <ul class="list list-simple-mini">
                     <li>
@@ -94,7 +94,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-6 col-md-2">
+            <div class="col-12 col-md-2 col-sm-12">
                 <h3 class="fw-light glowing-footer-menu-socials">Socials</h3>
                 <ul class="list list-simple-mini" id="footer-socials">
                     <li>

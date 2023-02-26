@@ -1,15 +1,14 @@
 <div class="row header-row">
-    <div class="col-md-2 col-sm-12 frontend-header">
+    <div class="col-12 col-md-2 col-sm-12 frontend-header">
         <a class="main-menu-link" id="logoanchor" href="/" target="_self" data-menu-group="prints">
-
-            <span id="logospan"><img id="aternixlogoheader" src="/media/photos/Logo_base.png" width="38"
-                    height="38" />
-                <div class="glitchbox">
-                    <h2 class="aternixtext" data-text="ATERNIX">
-                        ATERNIX
-                    </h2>
-                </div>
-            </span>
+                <span id="logospan"><img id="aternixlogoheader" src="/media/photos/Logo_base.png" width="38"
+                        height="38" />
+                    <div class="glitchbox">
+                        <h2 class="aternixtext" data-text="ATERNIX">
+                            ATERNIX
+                        </h2>
+                    </div>
+                </span>
         </a>
     </div>
     <div class="col-md-8 col-sm-12 frontend-header" id="frontend-header-div">
