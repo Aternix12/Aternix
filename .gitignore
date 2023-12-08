@@ -6,3 +6,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 /storage/logs
+node_modules
+vendor
