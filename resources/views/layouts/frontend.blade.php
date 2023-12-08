@@ -2,25 +2,13 @@
 <html lang="{{ config('app.locale') }}">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WLXGE87FY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-6WLXGE87FY');
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <title>Aternix</title>
 
     <meta name="description" content="Aternix - Terraforming Software, Website and Game Development Solutions">
-    <meta name="author" content="pixelcave">
+    <meta name="author" content="Tristan Mitchell">
     <!--<meta name="robots" content="noindex, nofollow">-->
     <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />-->
 
