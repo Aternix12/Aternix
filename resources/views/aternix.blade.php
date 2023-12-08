@@ -11,9 +11,9 @@
 
     <!-- END Hero -->
     <div class="video-container">
-        <video width="1920" height="200" autoplay loop muted playsinline class="smoke">
+        {{-- <video width="1920" height="200" autoplay loop muted playsinline class="smoke">
             <source src="media/videos/Smoke.webm" type="video/webm">
-        </video>
+        </video> --}}
         <ul class="list list-simple-mini" id="smoke-socials">
             <li style="--clr: #2a475e;" class="no-shadow">
                 <a class="fw-semibold" href="https://store.steampowered.com/developer/aternix">
@@ -76,9 +76,9 @@
                 </a>
             </li>
         </ul>
-        <video width="1920" height="200" autoplay loop muted playsinline class="smoke" id="smoke-overlay">
+        {{-- <video width="1920" height="200" autoplay loop muted playsinline class="smoke" id="smoke-overlay">
             <source src="media/videos/Smoke.webm" type="video/webm">
-        </video>
+        </video> --}}
     </div>
 
     <div id="main" class="content">

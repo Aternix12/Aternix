@@ -132,6 +132,8 @@ canvas {
 }
 
 #main {
+    padding-top: 20%;
+    padding-bottom: 20%;
     background-color: #0E0E10;
 }
 
