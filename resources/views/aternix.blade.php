@@ -1,9 +1,6 @@
 @extends('layouts.frontend') @section('content')
     <link href="/js/plugins/tsparticles/particles.css" rel="stylesheet">
-
-
     <!-- Hero -->
-
     <div id="tsparticles">
         <script src="/js/plugins/tsparticles/tsParticles.min.js"></script>
 

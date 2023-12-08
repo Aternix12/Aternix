@@ -39,8 +39,8 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
     public const PREG_SPLIT_DELIM_CAPTURE = \PREG_SPLIT_DELIM_CAPTURE;
     public const PREG_SPLIT_OFFSET_CAPTURE = \PREG_SPLIT_OFFSET_CAPTURE;
 
-    protected $string = '';
-    protected $ignoreCase = false;
+    protected string $string = '';
+    protected ?bool $ignoreCase = false;
 
     abstract public function __construct(string $string = '');
 
@@ -448,19 +448,11 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             $delimiter .= 'i';
         }
 
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+        set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
 
         try {
             if (false === $chunks = preg_split($delimiter, $this->string, $limit, $flags)) {
-                $lastError = preg_last_error();
-
-                foreach (get_defined_constants(true)['pcre'] as $k => $v) {
-                    if ($lastError === $v && str_ends_with($k, '_ERROR')) {
-                        throw new RuntimeException('Splitting failed with '.$k.'.');
-                    }
-                }
-
-                throw new RuntimeException('Splitting failed with unknown error code.');
+                throw new RuntimeException('Splitting failed with error: '.preg_last_error_msg());
             }
         } finally {
             restore_error_handler();
@@ -515,20 +507,14 @@ abstract class AbstractString implements \Stringable, \JsonSerializable
             return $b;
         }
 
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
-
         try {
-            try {
-                $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
-            } catch (InvalidArgumentException $e) {
-                if (!\function_exists('iconv')) {
-                    throw $e;
-                }
-
-                $b->string = iconv('UTF-8', $toEncoding, $this->string);
+            $b->string = mb_convert_encoding($this->string, $toEncoding, 'UTF-8');
+        } catch (\ValueError $e) {
+            if (!\function_exists('iconv')) {
+                throw new InvalidArgumentException($e->getMessage(), $e->getCode(), $e);
             }
-        } finally {
-            restore_error_handler();
+
+            $b->string = iconv('UTF-8', $toEncoding, $this->string);
         }
 
         return $b;

@@ -3,6 +3,7 @@
 namespace Illuminate\Database\Schema\Grammars;
 
 use Illuminate\Database\Connection;
+use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 use RuntimeException;
@@ -15,8 +16,8 @@ class MySqlGrammar extends Grammar
      * @var string[]
      */
     protected $modifiers = [
-        'Unsigned', 'Charset', 'Collate', 'VirtualAs', 'StoredAs', 'Nullable', 'Invisible',
-        'Srid', 'Default', 'Increment', 'Comment', 'After', 'First',
+        'Unsigned', 'Charset', 'Collate', 'VirtualAs', 'StoredAs', 'Nullable',
+        'Srid', 'Default', 'OnUpdate', 'Invisible', 'Increment', 'Comment', 'After', 'First',
     ];
 
     /**
@@ -25,6 +26,13 @@ class MySqlGrammar extends Grammar
      * @var string[]
      */
     protected $serials = ['bigInteger', 'integer', 'mediumInteger', 'smallInteger', 'tinyInteger'];
+
+    /**
+     * The commands to be executed outside of create or alter command.
+     *
+     * @var string[]
+     */
+    protected $fluentCommands = ['AutoIncrementStartingValues'];
 
     /**
      * Compile a create database command.
@@ -60,6 +68,8 @@ class MySqlGrammar extends Grammar
     /**
      * Compile the query to determine the list of tables.
      *
+     * @deprecated Will be removed in a future Laravel version.
+     *
      * @return string
      */
     public function compileTableExists()
@@ -68,7 +78,66 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+     * Compile the query to determine the tables.
+     *
+     * @param  string  $database
+     * @return string
+     */
+    public function compileTables($database)
+    {
+        return sprintf(
+            'select table_name as `name`, (data_length + index_length) as `size`, '
+            .'table_comment as `comment`, engine as `engine`, table_collation as `collation` '
+            ."from information_schema.tables where table_schema = %s and table_type = 'BASE TABLE' "
+            .'order by table_name',
+            $this->quoteString($database)
+        );
+    }
+
+    /**
+     * Compile the query to determine the views.
+     *
+     * @param  string  $database
+     * @return string
+     */
+    public function compileViews($database)
+    {
+        return sprintf(
+            'select table_name as `name`, view_definition as `definition` '
+            .'from information_schema.views where table_schema = %s '
+            .'order by table_name',
+            $this->quoteString($database)
+        );
+    }
+
+    /**
+     * Compile the SQL needed to retrieve all table names.
+     *
+     * @deprecated Will be removed in a future Laravel version.
+     *
+     * @return string
+     */
+    public function compileGetAllTables()
+    {
+        return 'SHOW FULL TABLES WHERE table_type = \'BASE TABLE\'';
+    }
+
+    /**
+     * Compile the SQL needed to retrieve all view names.
+     *
+     * @deprecated Will be removed in a future Laravel version.
+     *
+     * @return string
+     */
+    public function compileGetAllViews()
+    {
+        return 'SHOW FULL TABLES WHERE table_type = \'VIEW\'';
+    }
+
+    /**
      * Compile the query to determine the list of columns.
+     *
+     * @deprecated Will be removed in a future Laravel version.
      *
      * @return string
      */
@@ -78,12 +147,32 @@ class MySqlGrammar extends Grammar
     }
 
     /**
+     * Compile the query to determine the columns.
+     *
+     * @param  string  $database
+     * @param  string  $table
+     * @return string
+     */
+    public function compileColumns($database, $table)
+    {
+        return sprintf(
+            'select column_name as `name`, data_type as `type_name`, column_type as `type`, '
+            .'collation_name as `collation`, is_nullable as `nullable`, '
+            .'column_default as `default`, column_comment AS `comment`, extra as `extra` '
+            .'from information_schema.columns where table_schema = %s and table_name = %s '
+            .'order by ordinal_position asc',
+            $this->quoteString($database),
+            $this->quoteString($table)
+        );
+    }
+
+    /**
      * Compile a create table command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @param  \Illuminate\Database\Connection  $connection
-     * @return array
+     * @return string
      */
     public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection)
     {
@@ -101,9 +190,7 @@ class MySqlGrammar extends Grammar
         // Finally, we will append the engine configuration onto this SQL statement as
         // the final thing we do before returning this finished SQL. Once this gets
         // added the query will be ready to execute against the real connections.
-        return array_values(array_filter(array_merge([$this->compileCreateEngine(
-            $sql, $connection, $blueprint
-        )], $this->compileAutoIncrementStartingValues($blueprint))));
+        return $this->compileCreateEngine($sql, $connection, $blueprint);
     }
 
     /**
@@ -112,15 +199,15 @@ class MySqlGrammar extends Grammar
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @param  \Illuminate\Database\Connection  $connection
-     * @return array
+     * @return string
      */
     protected function compileCreateTable($blueprint, $command, $connection)
     {
-        return trim(sprintf('%s table %s (%s)',
+        return sprintf('%s table %s (%s)',
             $blueprint->temporary ? 'create temporary' : 'create',
             $this->wrapTable($blueprint),
             implode(', ', $this->getColumns($blueprint))
-        ));
+        );
     }
 
     /**
@@ -178,29 +265,79 @@ class MySqlGrammar extends Grammar
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @return array
+     * @return string
      */
     public function compileAdd(Blueprint $blueprint, Fluent $command)
     {
         $columns = $this->prefixArray('add', $this->getColumns($blueprint));
 
-        return array_values(array_merge(
-            ['alter table '.$this->wrapTable($blueprint).' '.implode(', ', $columns)],
-            $this->compileAutoIncrementStartingValues($blueprint)
-        ));
+        return 'alter table '.$this->wrapTable($blueprint).' '.implode(', ', $columns);
     }
 
     /**
      * Compile the auto-incrementing column starting values.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
-     * @return array
+     * @param  \Illuminate\Support\Fluent  $command
+     * @return string
      */
-    public function compileAutoIncrementStartingValues(Blueprint $blueprint)
+    public function compileAutoIncrementStartingValues(Blueprint $blueprint, Fluent $command)
     {
-        return collect($blueprint->autoIncrementingStartingValues())->map(function ($value, $column) use ($blueprint) {
-            return 'alter table '.$this->wrapTable($blueprint->getTable()).' auto_increment = '.$value;
-        })->all();
+        if ($command->column->autoIncrement
+            && $value = $command->column->get('startingValue', $command->column->get('from'))) {
+            return 'alter table '.$this->wrapTable($blueprint).' auto_increment = '.$value;
+        }
+    }
+
+    /**
+     * Compile a rename column command.
+     *
+     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \Illuminate\Support\Fluent  $command
+     * @param  \Illuminate\Database\Connection  $connection
+     * @return array|string
+     */
+    public function compileRenameColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
+    {
+        return $connection->usingNativeSchemaOperations()
+            ? sprintf('alter table %s rename column %s to %s',
+                $this->wrapTable($blueprint),
+                $this->wrap($command->from),
+                $this->wrap($command->to)
+            )
+            : parent::compileRenameColumn($blueprint, $command, $connection);
+    }
+
+    /**
+     * Compile a change column command into a series of SQL statements.
+     *
+     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \Illuminate\Support\Fluent  $command
+     * @param  \Illuminate\Database\Connection  $connection
+     * @return array|string
+     *
+     * @throws \RuntimeException
+     */
+    public function compileChange(Blueprint $blueprint, Fluent $command, Connection $connection)
+    {
+        if (! $connection->usingNativeSchemaOperations()) {
+            return parent::compileChange($blueprint, $command, $connection);
+        }
+
+        $columns = [];
+
+        foreach ($blueprint->getChangedColumns() as $column) {
+            $sql = sprintf('%s %s%s %s',
+                is_null($column->renameTo) ? 'modify' : 'change',
+                $this->wrap($column),
+                is_null($column->renameTo) ? '' : ' '.$this->wrap($column->renameTo),
+                $this->getType($column)
+            );
+
+            $columns[] = $this->addModifiers($sql, $blueprint, $column);
+        }
+
+        return 'alter table '.$this->wrapTable($blueprint).' '.implode(', ', $columns);
     }
 
     /**
@@ -212,9 +349,11 @@ class MySqlGrammar extends Grammar
      */
     public function compilePrimary(Blueprint $blueprint, Fluent $command)
     {
-        $command->name(null);
-
-        return $this->compileKey($blueprint, $command, 'primary key');
+        return sprintf('alter table %s add primary key %s(%s)',
+            $this->wrapTable($blueprint),
+            $command->algorithm ? 'using '.$command->algorithm : '',
+            $this->columnize($command->columns)
+        );
     }
 
     /**
@@ -453,26 +592,6 @@ class MySqlGrammar extends Grammar
     }
 
     /**
-     * Compile the SQL needed to retrieve all table names.
-     *
-     * @return string
-     */
-    public function compileGetAllTables()
-    {
-        return 'SHOW FULL TABLES WHERE table_type = \'BASE TABLE\'';
-    }
-
-    /**
-     * Compile the SQL needed to retrieve all view names.
-     *
-     * @return string
-     */
-    public function compileGetAllViews()
-    {
-        return 'SHOW FULL TABLES WHERE table_type = \'VIEW\'';
-    }
-
-    /**
      * Compile the command to enable foreign key constraints.
      *
      * @return string
@@ -490,6 +609,21 @@ class MySqlGrammar extends Grammar
     public function compileDisableForeignKeyConstraints()
     {
         return 'SET FOREIGN_KEY_CHECKS=0;';
+    }
+
+    /**
+     * Compile a table comment command.
+     *
+     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \Illuminate\Support\Fluent  $command
+     * @return string
+     */
+    public function compileTableComment(Blueprint $blueprint, Fluent $command)
+    {
+        return sprintf('alter table %s comment = %s',
+            $this->wrapTable($blueprint),
+            "'".str_replace("'", "''", $command->comment)."'"
+        );
     }
 
     /**
@@ -724,13 +858,17 @@ class MySqlGrammar extends Grammar
      */
     protected function typeDateTime(Fluent $column)
     {
-        $columnType = $column->precision ? "datetime($column->precision)" : 'datetime';
-
         $current = $column->precision ? "CURRENT_TIMESTAMP($column->precision)" : 'CURRENT_TIMESTAMP';
 
-        $columnType = $column->useCurrent ? "$columnType default $current" : $columnType;
+        if ($column->useCurrent) {
+            $column->default(new Expression($current));
+        }
 
-        return $column->useCurrentOnUpdate ? "$columnType on update $current" : $columnType;
+        if ($column->useCurrentOnUpdate) {
+            $column->onUpdate(new Expression($current));
+        }
+
+        return $column->precision ? "datetime($column->precision)" : 'datetime';
     }
 
     /**
@@ -774,13 +912,17 @@ class MySqlGrammar extends Grammar
      */
     protected function typeTimestamp(Fluent $column)
     {
-        $columnType = $column->precision ? "timestamp($column->precision)" : 'timestamp';
-
         $current = $column->precision ? "CURRENT_TIMESTAMP($column->precision)" : 'CURRENT_TIMESTAMP';
 
-        $columnType = $column->useCurrent ? "$columnType default $current" : $columnType;
+        if ($column->useCurrent) {
+            $column->default(new Expression($current));
+        }
 
-        return $column->useCurrentOnUpdate ? "$columnType on update $current" : $columnType;
+        if ($column->useCurrentOnUpdate) {
+            $column->onUpdate(new Expression($current));
+        }
+
+        return $column->precision ? "timestamp($column->precision)" : 'timestamp';
     }
 
     /**
@@ -959,8 +1101,16 @@ class MySqlGrammar extends Grammar
      */
     protected function modifyVirtualAs(Blueprint $blueprint, Fluent $column)
     {
-        if (! is_null($column->virtualAs)) {
-            return " as ({$column->virtualAs})";
+        if (! is_null($virtualAs = $column->virtualAsJson)) {
+            if ($this->isJsonSelector($virtualAs)) {
+                $virtualAs = $this->wrapJsonSelector($virtualAs);
+            }
+
+            return " as ({$virtualAs})";
+        }
+
+        if (! is_null($virtualAs = $column->virtualAs)) {
+            return " as ({$this->getValue($virtualAs)})";
         }
     }
 
@@ -973,8 +1123,16 @@ class MySqlGrammar extends Grammar
      */
     protected function modifyStoredAs(Blueprint $blueprint, Fluent $column)
     {
-        if (! is_null($column->storedAs)) {
-            return " as ({$column->storedAs}) stored";
+        if (! is_null($storedAs = $column->storedAsJson)) {
+            if ($this->isJsonSelector($storedAs)) {
+                $storedAs = $this->wrapJsonSelector($storedAs);
+            }
+
+            return " as ({$storedAs}) stored";
+        }
+
+        if (! is_null($storedAs = $column->storedAs)) {
+            return " as ({$this->getValue($storedAs)}) stored";
         }
     }
 
@@ -1029,7 +1187,10 @@ class MySqlGrammar extends Grammar
      */
     protected function modifyNullable(Blueprint $blueprint, Fluent $column)
     {
-        if (is_null($column->virtualAs) && is_null($column->storedAs)) {
+        if (is_null($column->virtualAs) &&
+            is_null($column->virtualAsJson) &&
+            is_null($column->storedAs) &&
+            is_null($column->storedAsJson)) {
             return $column->nullable ? ' null' : ' not null';
         }
 
@@ -1063,6 +1224,20 @@ class MySqlGrammar extends Grammar
     {
         if (! is_null($column->default)) {
             return ' default '.$this->getDefaultValue($column->default);
+        }
+    }
+
+    /**
+     * Get the SQL for an "on update" column modifier.
+     *
+     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \Illuminate\Support\Fluent  $column
+     * @return string|null
+     */
+    protected function modifyOnUpdate(Blueprint $blueprint, Fluent $column)
+    {
+        if (! is_null($column->onUpdate)) {
+            return ' on update '.$this->getValue($column->onUpdate);
         }
     }
 
@@ -1131,7 +1306,7 @@ class MySqlGrammar extends Grammar
      */
     protected function modifySrid(Blueprint $blueprint, Fluent $column)
     {
-        if (! is_null($column->srid) && is_int($column->srid) && $column->srid > 0) {
+        if (is_int($column->srid) && $column->srid > 0) {
             return ' srid '.$column->srid;
         }
     }
@@ -1149,5 +1324,18 @@ class MySqlGrammar extends Grammar
         }
 
         return $value;
+    }
+
+    /**
+     * Wrap the given JSON selector.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    protected function wrapJsonSelector($value)
+    {
+        [$field, $path] = $this->wrapJsonFieldAndPath($value);
+
+        return 'json_unquote(json_extract('.$field.$path.'))';
     }
 }

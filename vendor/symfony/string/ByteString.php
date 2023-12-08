@@ -236,19 +236,11 @@ class ByteString extends AbstractString
             $regexp .= 'i';
         }
 
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+        set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
 
         try {
             if (false === $match($regexp, $this->string, $matches, $flags | \PREG_UNMATCHED_AS_NULL, $offset)) {
-                $lastError = preg_last_error();
-
-                foreach (get_defined_constants(true)['pcre'] as $k => $v) {
-                    if ($lastError === $v && str_ends_with($k, '_ERROR')) {
-                        throw new RuntimeException('Matching failed with '.$k.'.');
-                    }
-                }
-
-                throw new RuntimeException('Matching failed with unknown error code.');
+                throw new RuntimeException('Matching failed with error: '.preg_last_error_msg());
             }
         } finally {
             restore_error_handler();
@@ -308,7 +300,7 @@ class ByteString extends AbstractString
 
         $replace = \is_array($to) || $to instanceof \Closure ? 'preg_replace_callback' : 'preg_replace';
 
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+        set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
 
         try {
             if (null === $string = $replace($fromRegexp, $to, $this->string)) {
@@ -425,7 +417,7 @@ class ByteString extends AbstractString
             return $u;
         }
 
-        set_error_handler(static function ($t, $m) { throw new InvalidArgumentException($m); });
+        set_error_handler(static fn ($t, $m) => throw new InvalidArgumentException($m));
 
         try {
             try {
