@@ -1,25 +1,25 @@
 @font-face {
     font-family: Aternix;
-    src: url('/fonts/Aternix-Regular.ttf');
+    src: url("/fonts/Aternix-Regular.ttf");
 }
 
 @font-face {
     font-family: FreeMono;
-    src: url('/fonts/FreeMono.otf');
+    src: url("/fonts/FreeMono.otf");
 }
 
 @font-face {
     font-family: Iceland;
-    src: url('/fonts/Iceland-Regular.ttf');
+    src: url("/fonts/Iceland-Regular.ttf");
 }
 
 @font-face {
     font-family: Electrolize;
-    src: url('/fonts/Electrolize-Regular.ttf');
+    src: url("/fonts/Electrolize-Regular.ttf");
 }
 @font-face {
     font-family: IcelandSerguiHis;
-    src: url('/fonts/IcelandSerguiHis.ttf');
+    src: url("/fonts/IcelandSerguiHis.ttf");
 }
 
 #page-container {
@@ -70,7 +70,7 @@ span {
     font-family: "Electrolize";
 }
 
-.main-menu-link>span {
+.main-menu-link > span {
     font-family: "Iceland";
     color: #f1f1f1;
     font-size: 20px;
@@ -118,7 +118,7 @@ ul {
     background-color: #171717;
 }
 
-.main-menu-link>svg {
+.main-menu-link > svg {
     margin-right: 0.5em;
     color: red;
 }
@@ -134,7 +134,7 @@ canvas {
 #main {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-color: #0E0E10;
+    background-color: #0e0e10;
 }
 
 #aternixlogoheader {
@@ -169,7 +169,6 @@ canvas {
 
 #about-hero {
     align-items: flex-end;
-
 }
 
 #about-hero-image {
@@ -209,7 +208,7 @@ canvas {
     height: 32px;
 }
 
-.about-icons>a>svg {
+.about-icons > a > svg {
     color: var(--clr);
 }
 
@@ -243,6 +242,7 @@ small {
 .video-container {
     margin-top: -5%;
     position: relative;
+    z-index: 5;
 }
 
 .hidden {
@@ -258,7 +258,7 @@ small {
 
 .os-scrollbar-track {
     mix-blend-mode: difference;
-    background-color: rgba(127, 127, 127, .155);
+    background-color: rgba(127, 127, 127, 0.155);
 }
 
 #runes {
@@ -288,38 +288,52 @@ footer {
 
 .glowing-footer-menu-explore {
     box-shadow: 0 10px 10px -10px red;
-    height: 13.5%;
+    height: 14%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
-
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .glowing-footer-menu-company {
     box-shadow: 0 10px 10px -10px orange;
-    height: 13.5%;
+    height: 14%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .glowing-footer-menu-projects {
     box-shadow: 0 10px 10px -10px yellow;
-    height: 13.5%;
+    height: 14%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .glowing-footer-menu-legal {
-    box-shadow: 0 10px 10px -10px #00D100;
-    height: 13.5%;
+    box-shadow: 0 10px 10px -10px #00d100;
+    height: 14%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .glowing-footer-menu-socials {
     box-shadow: 0 10px 10px -10px blue;
-    height: 13.5%;
+    height: 14%;
     width: fit-content;
     clip-path: inset(0px 0px -20px 0px);
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
 }
 
 #footer-logo {
@@ -327,6 +341,10 @@ footer {
     filter: drop-shadow(2px 2px black);
     top: 50%;
     transform: translateY(-50%);
+}
+
+#footer-menu-container {
+    text-align: center;
 }
 
 svg.svg-inline--fa.fa-steam {
@@ -346,7 +364,7 @@ svg.svg-inline--fa.fa-linkedin {
 }
 
 svg.svg-inline--fa.fa-instagram {
-    color: #E1306C;
+    color: #e1306c;
 }
 
 iconify-icon {
@@ -361,12 +379,12 @@ iconify-icon {
 }
 
 .content {
-    max-width: 1400px !important;
+    max-width: 50% !important;
 }
 
 main {
     position: relative;
-    background-color: #0E0E10;
+    background-color: #0e0e10;
     z-index: 1;
     overflow: hidden; /* Ensures the pseudo-element doesn't extend outside the main element */
 }
@@ -380,13 +398,18 @@ main {
 }
 
 .glow-effect::before {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(90vh - 300px);
     left: -900px;
     width: 1600px;
     height: 1600px;
-    background: radial-gradient(circle, rgba(128, 0, 128, 0.5), #0E0E10, transparent);
+    background: radial-gradient(
+        circle,
+        rgba(128, 0, 128, 0.5),
+        #0e0e10,
+        transparent
+    );
 }
 
 h5 {
@@ -413,7 +436,7 @@ a:hover {
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    padding-top: 47.5%
+    padding-top: 47.5%;
 }
 
 .vertical-center-col {
@@ -514,7 +537,7 @@ iframe {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #0E0E10;
+    background: #0e0e10;
     overflow: hidden;
     top: 0;
     display: inline;
@@ -743,17 +766,20 @@ iframe {
     opacity: 0;
 }
 
-.main-menu-link:hover>.wavyglitch:before,
+.main-menu-link:hover > .wavyglitch:before,
 .footerwavyglitch:hover:before {
-    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+        infinite;
     animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
     opacity: 1;
 }
 
-.main-menu-link:hover>.wavyglitch:after,
+.main-menu-link:hover > .wavyglitch:after,
 .footerwavyglitch:hover:after {
-    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-    animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    -webkit-animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
+        both infinite;
+    animation: glitch 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+        infinite;
     opacity: 1;
 }
 
@@ -812,13 +838,14 @@ iframe {
 #smoke-socials {
     margin: 0;
     position: absolute;
-    width: 100%;
-    display: block;
+    width: 80%;
     text-align: center;
     top: -50px;
+    left: 50%; /* Move the left edge to the center of the parent */
+    transform: translateX(-50%); /* Shift it back by half its own width */
 }
 
-#smoke-socials>li {
+#smoke-socials > li {
     display: inline;
 }
 
@@ -831,14 +858,14 @@ iframe {
     pointer-events: none;
 }
 
-#smoke-socials>li>a {
+#smoke-socials > li > a {
     position: relative !important;
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
 
-#smoke-socials>li {
+#smoke-socials > li {
     position: relative;
     display: inline-flex;
     width: 80px;
@@ -847,14 +874,14 @@ iframe {
     align-items: center;
 }
 
-#smoke-socials>li>a>svg {
+#smoke-socials > li > a > svg {
     margin: 0 !important;
     vertical-align: middle;
     line-height: 35px !important;
     height: 35px;
 }
 
-#smoke-socials>li>a>iconify-icon {
+#smoke-socials > li > a > iconify-icon {
     margin: 0 !important;
     vertical-align: middle;
     line-height: 40px !important;
@@ -870,21 +897,22 @@ iframe {
     animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 
-#smoke-socials li:hover+li>a>svg {
+#smoke-socials li:hover + li > a > svg {
     box-shadow: 0 0 45px 25px var(--clr);
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
-    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-
+    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+        infinite;
 }
 
-#smoke-socials li:hover+li>a>iconify-icon {
+#smoke-socials li:hover + li > a > iconify-icon {
     box-shadow: 0 0 45px 25px var(--clr);
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in-out;
-    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    animation: wavy 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both
+        infinite;
 }
 
 .no-shadow {
@@ -895,7 +923,7 @@ iframe {
     pointer-events: none;
 }
 
-.smoke-shadow>a>svg {
+.smoke-shadow > a > svg {
     border-radius: 50%;
     width: 1px !important;
     height: 1px !important;
@@ -906,7 +934,7 @@ iframe {
     transition-timing-function: ease-in-out;
 }
 
-.smoke-shadow>a>iconify-icon {
+.smoke-shadow > a > iconify-icon {
     border-radius: 50%;
     width: 1px !important;
     height: 1px !important;
@@ -916,9 +944,6 @@ iframe {
     transition-property: all;
     transition-timing-function: ease-in-out;
 }
-
-
-
 
 #smoke-overlay-container {
     pointer-events: none;
@@ -947,7 +972,6 @@ li {
     --card-color: rgba(20, 20, 20);
 }
 
-
 #cards {
     display: flex;
     flex-wrap: wrap;
@@ -957,7 +981,7 @@ li {
     margin: auto !important;
 }
 
-#cards:hover>.card::after {
+#cards:hover > .card::after {
     opacity: 1;
 }
 
@@ -991,20 +1015,24 @@ li {
 }
 
 .card::before {
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(136, 0, 0, 0.144),
-            transparent 40%);
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(136, 0, 0, 0.144),
+        transparent 40%
+    );
     z-index: 3;
 }
 
 .card::after {
-    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(128, 0, 106, 0.5),
-            transparent 40%);
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(128, 0, 106, 0.5),
+        transparent 40%
+    );
     z-index: 1;
 }
 
-.card>.card-content {
+.card > .card-content {
     background-color: var(--card-color);
     border-radius: inherit;
     display: flex;

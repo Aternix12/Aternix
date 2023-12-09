@@ -14,7 +14,7 @@
         {{-- <video width="1920" height="200" autoplay loop muted playsinline class="smoke">
             <source src="media/videos/Smoke.webm" type="video/webm">
         </video> --}}
-        <ul class="list list-simple-mini" id="smoke-socials">
+        <ul class="list list-simple-mini content" id="smoke-socials">
             <li style="--clr: #2a475e;" class="no-shadow">
                 <a class="fw-semibold" href="https://store.steampowered.com/developer/aternix">
                     <i class="fa-brands fa-steam"></i>
@@ -85,7 +85,7 @@
         <h2 id="runes" class="hidden">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</h2>
         <div class="row items-push">
             <div class="col-md-6 hidden">
-                <a class="block block-rounded bg-image h-100 mb-0" href="javascript:void(0)"
+                <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/war-in-space-arcade"
                     style="background-image: url('/media/photos/WarInSpace.png');">
                     <div class="block-content bg-black-50">
                         <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
@@ -126,7 +126,7 @@
             </div>
 
             <div class="col-md-6 hidden">
-                <a class="block block-rounded bg-image h-100 mb-0" href="javascript:void(0)"
+                <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/carbonfield"
                     style="background-image: url('/media/photos/CarbonField Promo Original.png');">
                     <div class="block-content bg-black-50">
                         <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
