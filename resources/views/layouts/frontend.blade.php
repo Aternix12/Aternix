@@ -117,7 +117,7 @@
             @include('sections.frontendheader')
         </header>
         <!-- Main Container -->
-        <main id="main-container">
+        <main>
             @yield('content')
         </main>
         <!-- END Main Container -->

@@ -365,7 +365,28 @@ iconify-icon {
 }
 
 main {
-    background-color: #0E0E10 !important;
+    position: relative;
+    background-color: #0E0E10;
+    z-index: 1;
+    overflow: hidden; /* Ensures the pseudo-element doesn't extend outside the main element */
+}
+
+.glow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.glow-effect::before {
+    content: '';
+    position: absolute;
+    top: calc(90vh - 300px);
+    left: -900px;
+    width: 1600px;
+    height: 1600px;
+    background: radial-gradient(circle, rgba(128, 0, 128, 0.5), #0E0E10, transparent);
 }
 
 h5 {
