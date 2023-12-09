@@ -80,7 +80,7 @@
             <source src="media/videos/Smoke.webm" type="video/webm">
         </video> --}}
     </div>
-
+    <div class="glow-effect"></div>
     <div id="main" class="content">
         <h2 id="runes" class="hidden">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</h2>
         <div class="row items-push">
