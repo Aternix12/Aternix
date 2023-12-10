@@ -1,11 +1,11 @@
 @extends('layouts.frontend') @section('content')
-    <div class="bg-image" style="background-image: url('/media/photos/gamestudio_hero.jpg');">
+    <div class="bg-image" style="background-image: url('/media/photos/CarbonField_Concept_Cinematic_Hero.png');">
         <div class="bg-black-50">
             <div class="content content-top content-full text-center">
                 <h1 class="fw-bold text-white mt-5 mb-2">
-                    Stuff
+                    CarbonField
                 </h1>
-                <h3 class="fw-normal text-white-75 mb-5">And things</h3>
+                <h3 class="fw-normal text-white-75 mb-5">WWI Themed Base-Builder RTS</h3>
             </div>
         </div>
     </div>

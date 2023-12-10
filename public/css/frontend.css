@@ -24,11 +24,20 @@
 
 #page-container {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #tsparticles {
     height: 90vh;
     width: 100% !important;
+    position: relative;
+    z-index: 1;
+}
+
+.landing-tile {
+    margin-bottom: 15%;
 }
 
 .frontend-header {
@@ -132,9 +141,12 @@ canvas {
 }
 
 #main {
+    background-color: #0e0e10;
+}
+
+.landing-content {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-color: #0e0e10;
 }
 
 #aternixlogoheader {
@@ -261,7 +273,7 @@ small {
     background-color: rgba(127, 127, 127, 0.155);
 }
 
-#runes {
+.runes {
     font-family: "IcelandSerguiHis" !important;
     font-weight: 500;
     display: inline-block;
@@ -369,13 +381,13 @@ svg.svg-inline--fa.fa-instagram {
 
 iconify-icon {
     color: #ef1c6e;
-    margin-right: 15px;
 }
 
 #footer-socials {
     display: flex;
     font-size: 25px !important;
     margin: 0;
+    justify-content: space-evenly;
 }
 
 .content {
@@ -386,30 +398,40 @@ main {
     position: relative;
     background-color: #0e0e10;
     z-index: 1;
+    flex: 1;
     overflow: hidden; /* Ensures the pseudo-element doesn't extend outside the main element */
 }
 
-.glow-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
+#glow1 {
     right: 0;
     bottom: 0;
-}
-
-.glow-effect::before {
     content: "";
     position: absolute;
-    top: calc(90vh - 300px);
-    left: -900px;
-    width: 1600px;
-    height: 1600px;
-    background: radial-gradient(
-        circle,
-        rgba(128, 0, 128, 0.5),
-        #0e0e10,
-        transparent
-    );
+    top: calc(90vh - 30%);
+    left: -30%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(rgb(89 11 89 / 52%), transparent, transparent);
+}
+
+#glow2 {
+    content: "";
+    position: absolute;
+    top: calc(90vh - 10%);
+    right: -30%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(rgb(16 7 100 / 33%), transparent, transparent);
+}
+
+#glow3 {
+    content: "";
+    position: absolute;
+    top: calc(90vh + 40%);
+    width: 200%;
+    left: -50%;
+    height: 1900px;
+    background: radial-gradient(rgb(71 12 12 / 80%), transparent, transparent);
 }
 
 h5 {
