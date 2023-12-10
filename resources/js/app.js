@@ -37,6 +37,31 @@ if (sPage == "") {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890;][()!?&%$/<>+=ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᚲᛊᛁᛉ"
     );
 
+    // Function to start the rune transformation
+    function startRuneTransformation(runeElement) {
+        if (!runeElement.dataset.started) {
+            // Check if not already started
+            textMatrixTransform(runeElement.id);
+            runeElement.dataset.started = "true"; // Mark as started
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    startRuneTransformation(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll(".runes").forEach((rune) => {
+            observer.observe(rune);
+        });
+    });
+
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -64,7 +89,7 @@ if (sPage == "") {
         const resultingText = runes.getAttribute("data-transform-text"); // Get the text from the data attribute
 
         for (let i = 0; i < runes.textContent.length; i++) {
-            let waitTime = getRandomInt(1500, 2000);
+            let waitTime = getRandomInt(1000, 1500);
             let endTime = getRandomInt(0, 500);
             if (!(runes.textContent[i] == " ")) {
                 setTimeout(
@@ -101,11 +126,6 @@ if (sPage == "") {
             }
         }
     }
-
-    $(document).ready(function () {
-        textMatrixTransform("runes1");
-        textMatrixTransform("runes2");
-    });
 }
 
 //Minecraft Live API

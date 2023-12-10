@@ -29,6 +29,12 @@
 #tsparticles {
     height: 90vh;
     width: 100% !important;
+    position: relative;
+    z-index: 1;
+}
+
+.landing-tile {
+    margin-bottom: 15%;
 }
 
 .frontend-header {
@@ -391,24 +397,49 @@ main {
 }
 
 .glow-effect {
+}
+
+#glow1 {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-}
-
-.glow-effect::before {
     content: "";
     position: absolute;
-    top: calc(90vh - 300px);
-    left: -900px;
-    width: 1600px;
-    height: 1600px;
+    top: calc(90vh - 50%);
+    left: -50%;
+    width: 100%;
     background: radial-gradient(
-        circle,
         rgba(128, 0, 128, 0.5),
-        #0e0e10,
+        transparent,
+        transparent
+    );
+}
+
+#glow2 {
+    content: "";
+    position: absolute;
+    top: calc(90vh - 25%);
+    right: -50%;
+    width: 1600px;
+    height: 2500px;
+    background: radial-gradient(
+        rgba(16, 7, 100, 0.5),
+        transparent,
+        transparent
+    );
+}
+
+#glow3 {
+    content: "";
+    position: absolute;
+    top: calc(90vh);
+    width: 1900px;
+    height: 1900px;
+    background: radial-gradient(
+        rgba(71, 12, 12, 0.5),
+        transparent,
         transparent
     );
 }

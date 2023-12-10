@@ -2119,6 +2119,14 @@ hiddenElements.forEach(function (el) {
 var sPath = window.location.pathname;
 var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
 if (sPage == "") {
+  // Function to start the rune transformation
+  var startRuneTransformation = function startRuneTransformation(runeElement) {
+    if (!runeElement.dataset.started) {
+      // Check if not already started
+      textMatrixTransform(runeElement.id);
+      runeElement.dataset.started = "true"; // Mark as started
+    }
+  };
   var getRandomInt = function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -2135,7 +2143,7 @@ if (sPage == "") {
     console.log(runes);
     var resultingText = runes.getAttribute("data-transform-text"); // Get the text from the data attribute
     var _loop = function _loop() {
-      var waitTime = getRandomInt(1500, 2000);
+      var waitTime = getRandomInt(1000, 1500);
       var endTime = getRandomInt(0, 500);
       if (!(runes.textContent[i] == " ")) {
         setTimeout(function (i) {
@@ -2163,13 +2171,22 @@ if (sPage == "") {
     }
   };
   var chars = Object.assign([], "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890;][()!?&%$/<>+=ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᚲᛊᛁᛉ");
+  document.addEventListener("DOMContentLoaded", function () {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          startRuneTransformation(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    document.querySelectorAll(".runes").forEach(function (rune) {
+      observer.observe(rune);
+    });
+  });
   String.prototype.replaceAt = function (index, replacement) {
     return this.substring(0, index) + replacement + this.substring(index + replacement.length);
   };
-  $(document).ready(function () {
-    textMatrixTransform("runes1");
-    textMatrixTransform("runes2");
-  });
 }
 
 //Minecraft Live API

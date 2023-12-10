@@ -80,10 +80,12 @@
             <source src="media/videos/Smoke.webm" type="video/webm">
         </video> --}}
     </div>
-    <div class="glow-effect"></div>
+    <div id="glow1" class="glow-effect"></div>
+    <div id="glow2" class="glow-effect"></div>
+    <div id="glow3" class="glow-effect"></div>
     <div id="main" class="content">
         <h2 id="runes1" class="hidden runes" data-transform-text="CarbonField">ᚲᚨᚱᛒᛟᚾᚠᛁᛖᛚᛞ</h2>
-        <div class="col-md-12 hidden">
+        <div class="col-md-12 hidden landing-tile">
             <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/carbonfield"
                 style="background-image: url('/media/photos/CarbonField Promo Original.png');">
                 <div class="block-content bg-black-50">
@@ -120,7 +122,7 @@
             </a>
         </div>
         <h2 id="runes2" class="hidden runes" data-transform-text="War In Space Arcade">ᚹᚨᚱ ᛁᚾ ᛊᛈᚨᚲᛖ ᚨᚱᚲᚨᛞᛖ</h2>
-        <div class="col-md-12 hidden">
+        <div class="col-md-12 hidden landing-tile">
             <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/war-in-space-arcade"
                 style="background-image: url('/media/photos/WarInSpace.png');">
                 <div class="block-content bg-black-50">
