@@ -83,7 +83,7 @@
     <div id="glow1" class="glow-effect"></div>
     <div id="glow2" class="glow-effect"></div>
     <div id="glow3" class="glow-effect"></div>
-    <div id="main" class="content">
+    <div id="main" class="content landing-content">
         <h2 id="runes1" class="hidden runes" data-transform-text="CarbonField">ᚲᚨᚱᛒᛟᚾᚠᛁᛖᛚᛞ</h2>
         <div class="col-md-12 hidden landing-tile">
             <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/carbonfield"

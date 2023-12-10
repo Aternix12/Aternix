@@ -24,6 +24,9 @@
 
 #page-container {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #tsparticles {
@@ -138,9 +141,12 @@ canvas {
 }
 
 #main {
+    background-color: #0e0e10;
+}
+
+.landing-content {
     padding-top: 20%;
     padding-bottom: 20%;
-    background-color: #0e0e10;
 }
 
 #aternixlogoheader {
@@ -393,55 +399,40 @@ main {
     position: relative;
     background-color: #0e0e10;
     z-index: 1;
+    flex: 1;
     overflow: hidden; /* Ensures the pseudo-element doesn't extend outside the main element */
 }
 
-.glow-effect {
-}
-
 #glow1 {
-    position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
     content: "";
     position: absolute;
-    top: calc(90vh - 50%);
-    left: -50%;
-    width: 100%;
-    background: radial-gradient(
-        rgba(128, 0, 128, 0.5),
-        transparent,
-        transparent
-    );
+    top: calc(90vh - 30%);
+    left: -30%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(rgb(89 11 89 / 52%), transparent, transparent);
 }
 
 #glow2 {
     content: "";
     position: absolute;
-    top: calc(90vh - 25%);
-    right: -50%;
-    width: 1600px;
-    height: 2500px;
-    background: radial-gradient(
-        rgba(16, 7, 100, 0.5),
-        transparent,
-        transparent
-    );
+    top: calc(90vh - 10%);
+    right: -30%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(rgb(16 7 100 / 33%), transparent, transparent);
 }
 
 #glow3 {
     content: "";
     position: absolute;
-    top: calc(90vh);
-    width: 1900px;
+    top: calc(90vh + 40%);
+    width: 200%;
+    left: -50%;
     height: 1900px;
-    background: radial-gradient(
-        rgba(71, 12, 12, 0.5),
-        transparent,
-        transparent
-    );
+    background: radial-gradient(rgb(71 12 12 / 80%), transparent, transparent);
 }
 
 h5 {
