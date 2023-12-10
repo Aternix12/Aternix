@@ -1,14 +1,14 @@
-require('./bootstrap');
+require("./bootstrap");
 
-import 'overlayscrollbars/overlayscrollbars.css';
-import { OverlayScrollbars } from 'overlayscrollbars';
+import "overlayscrollbars/overlayscrollbars.css";
+import { OverlayScrollbars } from "overlayscrollbars";
 
-const osInstance = OverlayScrollbars(document.querySelector('body'), {});
+const osInstance = OverlayScrollbars(document.querySelector("body"), {});
 
 //Preloader
 document.addEventListener("DOMContentLoaded", function (event) {
     $(window).on("load", async function () {
-        const delay = ms => new Promise(res => setTimeout(res, ms));
+        const delay = (ms) => new Promise((res) => setTimeout(res, ms));
         await delay(200);
         $(".container").fadeOut("slow");
     });
@@ -18,21 +18,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            entry.target.classList.add("show");
         } else {
-            entry.target.classList.remove('show');
+            entry.target.classList.remove("show");
         }
     });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 //Runechanger
 var sPath = window.location.pathname;
-var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
-if(sPage == ""){
-    const chars = Object.assign([], "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890;][()!?&%$/<>+=ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᚲᛊᛁᛉ");
+var sPage = sPath.substring(sPath.lastIndexOf("/") + 1);
+if (sPage == "") {
+    const chars = Object.assign(
+        [],
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890;][()!?&%$/<>+=ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᚲᛊᛁᛉ"
+    );
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -41,8 +44,12 @@ if(sPage == ""){
     }
 
     String.prototype.replaceAt = function (index, replacement) {
-        return this.substring(0, index) + replacement + this.substring(index + replacement.length);
-    }
+        return (
+            this.substring(0, index) +
+            replacement +
+            this.substring(index + replacement.length)
+        );
+    };
 
     function randChar(charIndex, element) {
         let runestext = element.textContent;
@@ -51,79 +58,90 @@ if(sPage == ""){
         element.textContent = replaced;
     }
 
+    function textMatrixTransform(fieldID) {
+        const runes = document.getElementById(fieldID);
+        console.log(runes);
+        const resultingText = runes.getAttribute("data-transform-text"); // Get the text from the data attribute
 
-    $(document).ready(function () {
-        function textMatrixTransform(fieldID, resultingText) {
-            const runes = document.getElementById(fieldID);
-            for (let i = 0; i < runes.textContent.length; i++) {
-                let waitTime = getRandomInt(1500, 2000);
-                let endTime = getRandomInt(0, 500);
-                if (!(runes.textContent[i] == " ")) {
-                    setTimeout(
-                        function (i) {
-                            return function () {
-                                var interval = setInterval(
-                                    function (i) {
-                                        return function () {
-                                            randChar(i, runes);
-                                        };
-                                    }(i), 100)
+        for (let i = 0; i < runes.textContent.length; i++) {
+            let waitTime = getRandomInt(1500, 2000);
+            let endTime = getRandomInt(0, 500);
+            if (!(runes.textContent[i] == " ")) {
+                setTimeout(
+                    (function (i) {
+                        return function () {
+                            var interval = setInterval(
+                                (function (i) {
+                                    return function () {
+                                        randChar(i, runes);
+                                    };
+                                })(i),
+                                100
+                            );
 
-                                setTimeout(
-                                    function () {
-                                        return function () {
-                                            clearInterval(interval);
-                                            //Replace final character
-                                            let runestext = runes.textContent;
-                                            let replaced = runestext.replaceAt(i, resultingText[i]);
-                                            runes.textContent = replaced;
-                                        };
-                                    }(i), endTime + 1000);
-                            };
-                        }(i), waitTime);
-                }
+                            setTimeout(
+                                (function () {
+                                    return function () {
+                                        clearInterval(interval);
+                                        //Replace final character
+                                        let runestext = runes.textContent;
+                                        let replaced = runestext.replaceAt(
+                                            i,
+                                            resultingText[i]
+                                        );
+                                        runes.textContent = replaced;
+                                    };
+                                })(i),
+                                endTime + 1000
+                            );
+                        };
+                    })(i),
+                    waitTime
+                );
             }
         }
-        textMatrixTransform("runes", "OUR PROJECTS");
+    }
 
+    $(document).ready(function () {
+        textMatrixTransform("runes1");
+        textMatrixTransform("runes2");
     });
 }
-
 
 //Minecraft Live API
 var obfuscators = [];
 var styleMap = {
-    '§4': 'font-weight:normal;text-decoration:none;color:#be0000',
-    '§c': 'font-weight:normal;text-decoration:none;color:#fe3f3f',
-    '§6': 'font-weight:normal;text-decoration:none;color:#d9a334',
-    '§e': 'font-weight:normal;text-decoration:none;color:#fefe3f',
-    '§2': 'font-weight:normal;text-decoration:none;color:#00be00',
-    '§a': 'font-weight:normal;text-decoration:none;color:#3ffe3f',
-    '§b': 'font-weight:normal;text-decoration:none;color:#3ffefe',
-    '§3': 'font-weight:normal;text-decoration:none;color:#00bebe',
-    '§1': 'font-weight:normal;text-decoration:none;color:#0000be',
-    '§9': 'font-weight:normal;text-decoration:none;color:#3f3ffe',
-    '§d': 'font-weight:normal;text-decoration:none;color:#fe3ffe',
-    '§5': 'font-weight:normal;text-decoration:none;color:#be00be',
-    '§f': 'font-weight:normal;text-decoration:none;color:#ffffff',
-    '§7': 'font-weight:normal;text-decoration:none;color:#bebebe',
-    '§8': 'font-weight:normal;text-decoration:none;color:#3f3f3f',
-    '§0': 'font-weight:normal;text-decoration:none;color:#000000',
-    '§l': 'font-weight:bold',
-    '§n': 'text-decoration:underline;text-decoration-skip:spaces',
-    '§o': 'font-style:italic',
-    '§m': 'text-decoration:line-through;text-decoration-skip:spaces',
+    "§4": "font-weight:normal;text-decoration:none;color:#be0000",
+    "§c": "font-weight:normal;text-decoration:none;color:#fe3f3f",
+    "§6": "font-weight:normal;text-decoration:none;color:#d9a334",
+    "§e": "font-weight:normal;text-decoration:none;color:#fefe3f",
+    "§2": "font-weight:normal;text-decoration:none;color:#00be00",
+    "§a": "font-weight:normal;text-decoration:none;color:#3ffe3f",
+    "§b": "font-weight:normal;text-decoration:none;color:#3ffefe",
+    "§3": "font-weight:normal;text-decoration:none;color:#00bebe",
+    "§1": "font-weight:normal;text-decoration:none;color:#0000be",
+    "§9": "font-weight:normal;text-decoration:none;color:#3f3ffe",
+    "§d": "font-weight:normal;text-decoration:none;color:#fe3ffe",
+    "§5": "font-weight:normal;text-decoration:none;color:#be00be",
+    "§f": "font-weight:normal;text-decoration:none;color:#ffffff",
+    "§7": "font-weight:normal;text-decoration:none;color:#bebebe",
+    "§8": "font-weight:normal;text-decoration:none;color:#3f3f3f",
+    "§0": "font-weight:normal;text-decoration:none;color:#000000",
+    "§l": "font-weight:bold",
+    "§n": "text-decoration:underline;text-decoration-skip:spaces",
+    "§o": "font-style:italic",
+    "§m": "text-decoration:line-through;text-decoration-skip:spaces",
 };
 function obfuscate(string, elem) {
     var magicSpan,
         currNode,
         len = elem.childNodes.length;
-    if (string.indexOf('<br>') > -1) {
+    if (string.indexOf("<br>") > -1) {
         elem.innerHTML = string;
         for (var j = 0; j < len; j++) {
             currNode = elem.childNodes[j];
             if (currNode.nodeType === 3) {
-                magicSpan = document.createElement('span');
+                magicSpan = document.createElement("span");
                 magicSpan.innerHTML = currNode.nodeValue;
                 elem.replaceChild(magicSpan, currNode);
                 init(magicSpan);
@@ -136,28 +154,34 @@ function obfuscate(string, elem) {
         var i = 0,
             obsStr = str || el.innerHTML,
             len = obsStr.length;
-        obfuscators.push(window.setInterval(function () {
-            if (i >= len) i = 0;
-            obsStr = replaceRand(obsStr, i);
-            el.innerHTML = obsStr;
-            i++;
-        }, 0));
+        obfuscators.push(
+            window.setInterval(function () {
+                if (i >= len) i = 0;
+                obsStr = replaceRand(obsStr, i);
+                el.innerHTML = obsStr;
+                i++;
+            }, 0)
+        );
     }
     function randInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     function replaceRand(string, i) {
-        var randChar = String.fromCharCode(randInt(64, 90)); /*Numbers: 48-57 Al:64-90*/
-        return string.substr(0, i) + randChar + string.substr(i + 1, string.length);
+        var randChar = String.fromCharCode(
+            randInt(64, 90)
+        ); /*Numbers: 48-57 Al:64-90*/
+        return (
+            string.substr(0, i) + randChar + string.substr(i + 1, string.length)
+        );
     }
 }
 function applyCode(string, codes) {
     var len = codes.length;
-    var elem = document.createElement('span'),
+    var elem = document.createElement("span"),
         obfuscated = false;
     for (var i = 0; i < len; i++) {
-        elem.style.cssText += styleMap[codes[i]] + ';';
-        if (codes[i] === '§k') {
+        elem.style.cssText += styleMap[codes[i]] + ";";
+        if (codes[i] === "§k") {
             obfuscate(string, elem);
             obfuscated = true;
         }
@@ -174,11 +198,11 @@ function parseStyle(string) {
         noCode,
         final = document.createDocumentFragment(),
         len = codes.length,
-        string = string.replace(/\n|\\n/g, '<br>');
+        string = string.replace(/\n|\\n/g, "<br>");
 
     for (var i = 0; i < len; i++) {
         indexes.push(string.indexOf(codes[i]));
-        string = string.replace(codes[i], '\x00\x00');
+        string = string.replace(codes[i], "\x00\x00");
     }
     if (indexes[0] !== 0) {
         final.appendChild(applyCode(string.substring(0, indexes[0]), []));
@@ -195,8 +219,8 @@ function parseStyle(string) {
         } else {
             apply.push(codes[i]);
         }
-        if (apply.lastIndexOf('§r') > -1) {
-            apply = apply.slice(apply.lastIndexOf('§r') + 1);
+        if (apply.lastIndexOf("§r") > -1) {
+            apply = apply.slice(apply.lastIndexOf("§r") + 1);
         }
         tmpStr = string.substring(indexes[i], indexes[i + 1]);
         final.appendChild(applyCode(tmpStr, apply));
@@ -205,7 +229,7 @@ function parseStyle(string) {
 }
 function clearObfuscators() {
     var i = obfuscators.length;
-    for (; i--;) {
+    for (; i--; ) {
         clearInterval(obfuscators[i]);
     }
     obfuscators = [];
@@ -221,19 +245,20 @@ function cutString(str, cutStart, cutEnd) {
     return str.substr(0, cutStart) + str.substr(cutEnd + 1);
 }
 
-
 function initServerData(serverIp, serverPort) {
-    fetch('https://mcapi.us/server/status?ip=' + serverIp + '&port=' + serverPort)
-        .then(response => response.json())
-        .then(data => handleServerStatus(data));
+    fetch(
+        "https://mcapi.us/server/status?ip=" + serverIp + "&port=" + serverPort
+    )
+        .then((response) => response.json())
+        .then((data) => handleServerStatus(data));
 }
 
 initServerData("123.3.84.55", "26284");
 
 function handleServerStatus(data) {
     const status = document.getElementById("server-status");
-    if(status){
-        if (data.status == 'error') {
+    if (status) {
+        if (data.status == "error") {
             console.log(data.error);
             status.style = "color: red !important";
             status.innerHTML = "¤ Offline";
@@ -245,7 +270,6 @@ function handleServerStatus(data) {
 
         const motd = document.getElementById("motd");
         motd.append(data.motd.replaceColorCodes());
-
 
         const playerCounter = document.getElementById("player-count");
         playerCounter.innerHTML = data.players.now + "/" + data.players.max;
@@ -260,7 +284,7 @@ function handleServerStatus(data) {
 
 //For Cards
 if (document.getElementById("cards")) {
-    document.getElementById("cards").onmousemove = e => {
+    document.getElementById("cards").onmousemove = (e) => {
         for (const card of document.getElementsByClassName("card")) {
             const rect = card.getBoundingClientRect(),
                 x = e.clientX - rect.left,
@@ -268,7 +292,6 @@ if (document.getElementById("cards")) {
 
             card.style.setProperty("--mouse-x", `${x}px`);
             card.style.setProperty("--mouse-y", `${y}px`);
-        };
-    }
+        }
+    };
 }
-

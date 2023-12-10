@@ -261,7 +261,7 @@ small {
     background-color: rgba(127, 127, 127, 0.155);
 }
 
-#runes {
+.runes {
     font-family: "IcelandSerguiHis" !important;
     font-weight: 500;
     display: inline-block;
@@ -376,6 +376,7 @@ iconify-icon {
     display: flex;
     font-size: 25px !important;
     margin: 0;
+    justify-content: space-evenly;
 }
 
 .content {

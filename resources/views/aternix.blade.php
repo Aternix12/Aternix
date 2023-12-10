@@ -82,85 +82,83 @@
     </div>
     <div class="glow-effect"></div>
     <div id="main" class="content">
-        <h2 id="runes" class="hidden">ᛟᚢᚱ ᛈᚱᛟᛃᛖᚲᛏᛊ</h2>
-        <div class="row items-push">
-            <div class="col-md-6 hidden">
-                <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/war-in-space-arcade"
-                    style="background-image: url('/media/photos/WarInSpace.png');">
-                    <div class="block-content bg-black-50">
-                        <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
-                            <p><span class="badge bg-primary fw-bold p-2 text-uppercase">2018</span></p>
+        <h2 id="runes1" class="hidden runes" data-transform-text="CarbonField">ᚲᚨᚱᛒᛟᚾᚠᛁᛖᛚᛞ</h2>
+        <div class="col-md-12 hidden">
+            <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/carbonfield"
+                style="background-image: url('/media/photos/CarbonField Promo Original.png');">
+                <div class="block-content bg-black-50">
+                    <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
+                        <p>
+                            <span class="badge bg-danger fw-bold p-2 text-uppercase">In Development</span>
+                        </p>
 
-                            <p class="fs-sm">
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-steam text-white-50"></i>
+                        <p class="fs-sm">
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-eye text-white-50"></i>
 
-                                    Steam
-                                </span>
+                                433
+                            </span>
 
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-heart text-white-50"></i>
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-heart text-white-50"></i>
 
-                                    Itch
-                                </span>
+                                78
+                            </span>
 
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-comments text-white-50"></i>
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-comments text-white-50"></i>
 
-                                    IndieDB
-                                </span>
-
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-comments text-white-50"></i>
-
-                                    ModDB
-                                </span>
-                            </p>
-                        </div>
-
-                        <p class="fs-lg fw-bold text-white mb-1">War in Space Arcade</p>
-
-                        <p class="fw-medium text-white-75">Our First Launch Title · Progressive Space Shooter</p>
+                                43
+                            </span>
+                        </p>
                     </div>
-                </a>
-            </div>
 
-            <div class="col-md-6 hidden">
-                <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/carbonfield"
-                    style="background-image: url('/media/photos/CarbonField Promo Original.png');">
-                    <div class="block-content bg-black-50">
-                        <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
-                            <p>
-                                <span class="badge bg-danger fw-bold p-2 text-uppercase">In Development</span>
-                            </p>
+                    <p class="fs-lg fw-bold text-white mb-1">CarbonField</p>
 
-                            <p class="fs-sm">
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-eye text-white-50"></i>
+                    <p class="fw-medium text-white-75">Alt-History Trench Warfare RTS · Subscribe for Updates</p>
+                </div>
+            </a>
+        </div>
+        <h2 id="runes2" class="hidden runes" data-transform-text="War In Space Arcade">ᚹᚨᚱ ᛁᚾ ᛊᛈᚨᚲᛖ ᚨᚱᚲᚨᛞᛖ</h2>
+        <div class="col-md-12 hidden">
+            <a class="block block-rounded bg-image h-100 mb-0" href="/game-studio/war-in-space-arcade"
+                style="background-image: url('/media/photos/WarInSpace.png');">
+                <div class="block-content bg-black-50">
+                    <div class="mb-5 mb-sm-7 d-sm-flex justify-content-sm-between align-items-sm-center">
+                        <p><span class="badge bg-primary fw-bold p-2 text-uppercase">2018</span></p>
 
-                                    433
-                                </span>
+                        <p class="fs-sm">
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-steam text-white-50"></i>
 
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-heart text-white-50"></i>
+                                Steam
+                            </span>
 
-                                    78
-                                </span>
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-heart text-white-50"></i>
 
-                                <span class="text-white fw-semibold me-1">
-                                    <i class="fa fa-fw fa-comments text-white-50"></i>
+                                Itch
+                            </span>
 
-                                    43
-                                </span>
-                            </p>
-                        </div>
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-comments text-white-50"></i>
 
-                        <p class="fs-lg fw-bold text-white mb-1">CarbonField</p>
+                                IndieDB
+                            </span>
 
-                        <p class="fw-medium text-white-75">Alt-History Trench Warfare RTS · Subscribe for Updates</p>
+                            <span class="text-white fw-semibold me-1">
+                                <i class="fa fa-fw fa-comments text-white-50"></i>
+
+                                ModDB
+                            </span>
+                        </p>
                     </div>
-                </a>
-            </div>
+
+                    <p class="fs-lg fw-bold text-white mb-1">War in Space Arcade</p>
+
+                    <p class="fw-medium text-white-75">Our First Launch Title · Progressive Space Shooter</p>
+                </div>
+            </a>
         </div>
     </div>
 @endsection
